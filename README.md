@@ -3,8 +3,11 @@
 Go + Postgres. One binary (`soupq`) with subcommands `migrate`, `api`, `worker`, `chaos`.
 
 ```bash
-docker compose up --build          # db + migrate + api (:8080) + 4 workers
+docker compose up                  # db + migrate + api (:8080) + 4 workers
 ```
+
+The first run builds the image automatically. After changing the code, use
+`docker compose up --build` to rebuild it.
 
 - Design (claim, dead-worker detection, cancel, guarantee): [docs/DESIGN.md](docs/DESIGN.md)
 - Chaos harness: [cmd/soupq/chaos.go](cmd/soupq/chaos.go), raw output in [results/](results/)

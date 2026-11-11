@@ -1,6 +1,6 @@
 # How I used AI
 
-I built this with Claude Code (Claude Opus) running as an agent in my terminal. The agent
+I built this with Claude Code running as an agent in my terminal. The agent
 wrote the code, ran Docker, the tests and the chaos harness, and read their output. I owned
 the decisions: what to build, in which stack, in what order, and what counts as done.
 
@@ -54,5 +54,6 @@ Design flaws in the first code, found by the tests and fixed:
 - `go test` silent-failure suite under three isolation levels: `results/tests/`.
 - 12 chaos runs with 10,000 jobs each, plus runs against mutant code, summarised in
   `docs/REPORT.md`.
-- A fresh clone of this repository started with `docker compose up --build`, and the tests
+- A fresh clone of this repository, with no prebuilt image, started with plain
+  `docker compose up` exactly as the brief says, and the tests
   and a chaos run passed from that clone before submission.

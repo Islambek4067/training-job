@@ -1,0 +1,3 @@
+# the task brief belongs to Soup, not to this repo
+*.pdf
+# keep results/: raw output of every run is a deliverable

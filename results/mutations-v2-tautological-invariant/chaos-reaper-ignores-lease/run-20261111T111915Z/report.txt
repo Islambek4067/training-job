@@ -1,0 +1,14 @@
+==================== CHAOS RUN 20261111T111915Z ====================
+seed=1794395955362870854 elapsed=1m55.913s jobs=2000 workers=8 isolation=""
+chaos: kill -9=51  SIGSTOP(8s)=20  clock-jumps=0  respawns=51
+client: POSTs=3866 (duplicate/replayed=1843, retries=0, transport/5xx errors=0)  mismatch-409=23
+client: cancels 200=216 409=8 other=0
+client: POST latency p50=2.814ms p99=8.496ms max=46.635ms
+db: jobs=2000  succeeded=1641 failed=181 (lease-exhausted=134) cancelled=178 queued=0 running=0
+db: executions (job_runs)=3891  committed effects=1641
+db: runs per job histogram: 0=178 1=819 2=472 3=198 4=131 5+=202
+worker events: failed=45 lost_ownership=203 reaped=578 stale_commit_rejected=1954
+coverage: zombie/cancelled owners stopped by fencing=2157 (stale commits rejected=1954), re-executed jobs=2069
+EFFICIENCY WARNING: 2069 re-executions but only 71 kills/freezes/forced expiries; leases are lost by live workers
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS

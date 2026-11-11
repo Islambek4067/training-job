@@ -1,0 +1,42 @@
+=== mutation no-fencing-on-complete: 'WHERE id = $1 AND attempt = $2 AND status = 'running'
+		RETURNING id, attempt' -> 'WHERE id = $1 AND $2::int IS NOT NULL AND status = 'running'
+		RETURNING id, attempt'
+=== RUN   TestZombieCannotWriteStaleResult
+=== RUN   TestZombieCannotWriteStaleResult/read_committed
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+=== RUN   TestZombieCannotWriteStaleResult/repeatable_read
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+=== RUN   TestZombieCannotWriteStaleResult/serializable
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+--- FAIL: TestZombieCannotWriteStaleResult (0.37s)
+    --- FAIL: TestZombieCannotWriteStaleResult/read_committed (0.13s)
+    --- FAIL: TestZombieCannotWriteStaleResult/repeatable_read (0.12s)
+    --- FAIL: TestZombieCannotWriteStaleResult/serializable (0.12s)
+FAIL
+FAIL	soupq/internal/store	0.377s
+FAIL
+KILLED: tests fail with the mutation (good)
+=== chaos with mutant workers (no-fencing-on-complete)
+run 20261111T112228Z seed=1794396148412138555 jobs=2000 workers=8 rate=200/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 long=0.02x4000ms isolation=""
+client load finished after 29.219s; waiting for drain
+==================== CHAOS RUN 20261111T112228Z ====================
+seed=1794396148412138555 elapsed=1m17.336s jobs=2000 workers=8 isolation=""
+chaos: kill -9=35  SIGSTOP(8s)=12  clock-jumps=0  respawns=35
+client: POSTs=3665 (duplicate/replayed=1649, retries=0, transport/5xx errors=0)  mismatch-409=16
+client: cancels 200=237 409=12 other=0
+client: POST latency p50=2.939ms p99=8.986ms max=16.434ms
+db: jobs=2000  succeeded=1760 failed=39 (lease-exhausted=0) cancelled=201 queued=0 running=0
+db: executions (job_runs)=1838  committed effects=1760
+db: runs per job histogram: 0=201 1=1766 2=28 3=4 4=1 5+=0
+worker events: failed=39 lost_ownership=1 reaped=39 stale_commit_rejected=10
+coverage: zombie/cancelled owners stopped by fencing=11 (stale commits rejected=10), re-executed jobs=39
+violations by kind: map[FENCING:4]
+  FENCING: job 601 effect written by attempt 1, final attempt 2
+  FENCING: job 2679 effect written by attempt 2, final attempt 3
+  FENCING: job 1248 effect written by attempt 2, final attempt 3
+  FENCING: job 1847 effect written by attempt 3, final attempt 4
+RESULT: FAIL (4 violations)
+time=2026-11-11T16:23:45.891+05:00 level=ERROR msg=fatal err="4 invariant violations"

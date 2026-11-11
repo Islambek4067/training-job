@@ -1,0 +1,66 @@
+x-app: &app
+  build: .
+  image: soupq:local
+  environment: &env
+    DATABASE_URL: postgres://soup:soup@db:5432/soup?sslmode=disable
+    LEASE_MS: "5000"
+    HEARTBEAT_MS: "1000"
+    REAP_MS: "1000"
+    POLL_MS: "100"
+    MAX_ATTEMPTS: "5"
+    PG_ISOLATION: ${PG_ISOLATION:-}
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: soup
+      POSTGRES_PASSWORD: soup
+      POSTGRES_DB: soup
+    command: ["postgres", "-c", "max_connections=300"]
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U soup -d soup"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  migrate:
+    <<: *app
+    command: ["migrate"]
+    depends_on:
+      db: { condition: service_healthy }
+    restart: "no"
+
+  api:
+    <<: *app
+    command: ["api"]
+    ports: ["8080:8080"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  worker:
+    <<: *app
+    command: ["worker"]
+    deploy:
+      replicas: 4
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  # The chaos harness spawns and kills its OWN 8 worker processes inside this container.
+  # Run it via scripts/chaos.sh (which stops the regular workers first).
+  chaos:
+    <<: *app
+    profiles: ["chaos"]
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    entrypoint: ["/usr/local/bin/soupq", "chaos"]
+    environment:
+      <<: *env
+      API_URL: http://api:8080
+      RESULTS_DIR: /results
+    volumes:
+      - ./results:/results
+    depends_on:
+      api: { condition: service_started }

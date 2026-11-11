@@ -1,0 +1,60 @@
+ Container soup_task-db-1  Running
+ Container soup_task-migrate-1  Recreate
+ Container soup_task-migrate-1  Recreated
+ Container soup_task-api-1  Recreate
+ Container soup_task-api-1  Recreated
+ Container soup_task-db-1  Waiting
+ Container soup_task-db-1  Healthy
+ Container soup_task-migrate-1  Starting
+ Container soup_task-migrate-1  Started
+ Container soup_task-migrate-1  Waiting
+ Container soup_task-migrate-1  Exited
+ Container soup_task-api-1  Starting
+ Container soup_task-api-1  Started
+run 20261111T114443Z seed=1794397483860221654 jobs=10000 workers=8 rate=100/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=10s dup=0.30 cancel=0.10 fail=0.02 long=0.02x4000ms isolation=""
+t= 10s posts=1718 kills=5 pauses=2 jumps=1  queued=547 running=10 succeeded=351 failed=5 cancelled=86
+t= 20s posts=3514 kills=10 pauses=5 jumps=3  queued=1068 running=5 succeeded=727 failed=12 cancelled=187
+t= 30s posts=5473 kills=16 pauses=6 jumps=3  queued=1519 running=11 succeeded=1160 failed=26 cancelled=284
+t= 40s posts=7425 kills=20 pauses=8 jumps=4  queued=2077 running=9 succeeded=1499 failed=28 cancelled=387
+t= 50s posts=9405 kills=25 pauses=10 jumps=5  queued=2760 running=10 succeeded=1710 failed=29 cancelled=491
+t= 60s posts=11323 kills=29 pauses=12 jumps=7  queued=3415 running=8 succeeded=1956 failed=34 cancelled=587
+t= 70s posts=13178 kills=33 pauses=14 jumps=8  queued=4014 running=9 succeeded=2269 failed=41 cancelled=667
+t= 80s posts=15070 kills=38 pauses=16 jumps=10  queued=4644 running=8 succeeded=2544 failed=48 cancelled=757
+t= 90s posts=16942 kills=42 pauses=18 jumps=11  queued=5260 running=9 succeeded=2830 failed=53 cancelled=849
+t=100s posts=18789 kills=47 pauses=20 jumps=12  queued=5762 running=10 succeeded=3215 failed=58 cancelled=955
+t=110s posts=19014 kills=52 pauses=22 jumps=13  queued=5443 running=10 succeeded=3507 failed=63 cancelled=977
+client load finished after 1m59.784s; waiting for drain
+t=120s posts=19087 kills=56 pauses=24 jumps=14  queued=5099 running=8 succeeded=3847 failed=69 cancelled=977
+t=130s posts=19087 kills=61 pauses=26 jumps=15  queued=4817 running=7 succeeded=4128 failed=71 cancelled=977
+t=140s posts=19087 kills=67 pauses=27 jumps=16  queued=4542 running=8 succeeded=4398 failed=75 cancelled=977
+t=150s posts=19087 kills=72 pauses=29 jumps=17  queued=4238 running=9 succeeded=4696 failed=80 cancelled=977
+t=160s posts=19087 kills=76 pauses=32 jumps=18  queued=4021 running=9 succeeded=4909 failed=84 cancelled=977
+t=170s posts=19087 kills=82 pauses=34 jumps=20  queued=3805 running=5 succeeded=5119 failed=94 cancelled=977
+t=180s posts=19087 kills=86 pauses=36 jumps=21  queued=3575 running=8 succeeded=5344 failed=96 cancelled=977
+t=190s posts=19087 kills=90 pauses=39 jumps=22  queued=3348 running=6 succeeded=5565 failed=104 cancelled=977
+t=200s posts=19087 kills=96 pauses=41 jumps=23  queued=3131 running=8 succeeded=5776 failed=108 cancelled=977
+t=210s posts=19087 kills=101 pauses=43 jumps=23  queued=2855 running=9 succeeded=6045 failed=114 cancelled=977
+t=220s posts=19087 kills=106 pauses=46 jumps=24  queued=2613 running=8 succeeded=6284 failed=118 cancelled=977
+t=230s posts=19087 kills=111 pauses=48 jumps=25  queued=2283 running=9 succeeded=6603 failed=128 cancelled=977
+t=240s posts=19087 kills=115 pauses=50 jumps=26  queued=1967 running=8 succeeded=6914 failed=134 cancelled=977
+t=250s posts=19087 kills=119 pauses=53 jumps=27  queued=1675 running=9 succeeded=7194 failed=145 cancelled=977
+t=260s posts=19087 kills=124 pauses=54 jumps=28  queued=1481 running=8 succeeded=7381 failed=153 cancelled=977
+t=270s posts=19087 kills=129 pauses=56 jumps=29  queued=1146 running=6 succeeded=7708 failed=163 cancelled=977
+t=280s posts=19087 kills=134 pauses=57 jumps=30  queued=811 running=11 succeeded=8034 failed=167 cancelled=977
+t=290s posts=19087 kills=138 pauses=59 jumps=31  queued=472 running=8 succeeded=8367 failed=176 cancelled=977
+t=300s posts=19087 kills=145 pauses=61 jumps=32  queued=260 running=10 succeeded=8572 failed=181 cancelled=977
+t=310s posts=19087 kills=149 pauses=63 jumps=32  queued=30 running=9 succeeded=8796 failed=188 cancelled=977
+t=320s posts=19087 kills=155 pauses=65 jumps=34  queued=0 running=1 succeeded=8834 failed=188 cancelled=977
+==================== CHAOS RUN 20261111T114443Z ====================
+seed=1794397483860221654 elapsed=5m34.349s jobs=10000 workers=8 isolation=""
+chaos: kill -9=157  SIGSTOP(8s)=65  clock-jumps=34  respawns=157
+client: POSTs=19087 (duplicate/replayed=8989, retries=0, transport/5xx errors=0)  mismatch-409=98
+client: cancels 200=1171 409=12 other=0
+client: POST latency p50=2.03ms p99=7.777ms max=79.951ms
+db: jobs=10000  succeeded=8834 failed=189 (lease-exhausted=6) cancelled=977 queued=0 running=0
+db: executions (job_runs)=9334  committed effects=8834
+db: runs per job histogram: 0=976 1=8787 2=194 3=24 4=8 5+=11
+worker events: failed=183 lost_ownership=53 reaped=132 stale_commit_rejected=117
+coverage: zombie/cancelled owners stopped by fencing=170 (stale commits rejected=117), re-executed jobs=310
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS

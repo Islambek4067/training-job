@@ -1,0 +1,16 @@
+=== mutation no-row-lock-no-recheck-on-claim: 'FROM c WHERE j.id = c.id AND j.status = 'queued'' -> 'FROM c WHERE j.id = c.id'
+=== RUN   TestNoDoubleClaim
+=== RUN   TestNoDoubleClaim/read_committed
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 293ms, false 'queue empty' answers=53
+=== RUN   TestNoDoubleClaim/repeatable_read
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 292ms, false 'queue empty' answers=46
+=== RUN   TestNoDoubleClaim/serializable
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 2.51s, false 'queue empty' answers=1
+    silent_test.go:177: 30 claims gave up after 20 serialization retries (worker would retry)
+--- PASS: TestNoDoubleClaim (10.61s)
+    --- PASS: TestNoDoubleClaim/read_committed (2.76s)
+    --- PASS: TestNoDoubleClaim/repeatable_read (2.84s)
+    --- PASS: TestNoDoubleClaim/serializable (5.01s)
+PASS
+ok  	soupq/internal/store	10.619s
+SURVIVED: tests still pass (a test gap, or an equivalent mutant — see docs/SILENT_FAILURES.md)

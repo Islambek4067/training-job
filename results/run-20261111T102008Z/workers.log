@@ -1,0 +1,598 @@
+harness 2026-11-11T10:20:08.728478216Z run 20261111T102008Z seed=1794392408578913544 jobs=10000 workers=8 rate=100/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 isolation=""
+w0.g0 time=2026-11-11T10:20:08.741Z level=INFO msg="worker started" worker=w0.g0 concurrency=1 lease=5s heartbeat=1s
+w2.g0 time=2026-11-11T10:20:08.741Z level=INFO msg="worker started" worker=w2.g0 concurrency=1 lease=5s heartbeat=1s
+w1.g0 time=2026-11-11T10:20:08.742Z level=INFO msg="worker started" worker=w1.g0 concurrency=1 lease=5s heartbeat=1s
+w3.g0 time=2026-11-11T10:20:08.742Z level=INFO msg="worker started" worker=w3.g0 concurrency=1 lease=5s heartbeat=1s
+w5.g0 time=2026-11-11T10:20:08.743Z level=INFO msg="worker started" worker=w5.g0 concurrency=1 lease=5s heartbeat=1s
+w4.g0 time=2026-11-11T10:20:08.744Z level=INFO msg="worker started" worker=w4.g0 concurrency=1 lease=5s heartbeat=1s
+w7.g0 time=2026-11-11T10:20:08.745Z level=INFO msg="worker started" worker=w7.g0 concurrency=1 lease=5s heartbeat=1s
+w6.g0 time=2026-11-11T10:20:08.746Z level=INFO msg="worker started" worker=w6.g0 concurrency=1 lease=5s heartbeat=1s
+w3.g0 time=2026-11-11T10:20:10.021Z level=INFO msg="job failed" worker=w3.g0 job=112 attempt=1 slot=w3.g0/0 event=failed err="simulated training failure"
+w6.g0 time=2026-11-11T10:20:10.279Z level=INFO msg="job failed" worker=w6.g0 job=130 attempt=1 slot=w6.g0/0 event=failed err="simulated training failure"
+w6.g0 time=2026-11-11T10:20:10.329Z level=INFO msg="job failed" worker=w6.g0 job=148 attempt=1 slot=w6.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:10.467702844Z harness: kill -9 w3.g0 (pid 27)
+w3.g1 time=2026-11-11T10:20:10.478Z level=INFO msg="worker started" worker=w3.g1 concurrency=1 lease=5s heartbeat=1s
+w7.g0 time=2026-11-11T10:20:10.745Z level=INFO msg="job failed" worker=w7.g0 job=176 attempt=1 slot=w7.g0/0 event=failed err="simulated training failure"
+w3.g1 time=2026-11-11T10:20:10.940Z level=INFO msg="job failed" worker=w3.g1 job=203 attempt=1 slot=w3.g1/0 event=failed err="simulated training failure"
+w6.g0 time=2026-11-11T10:20:11.065Z level=INFO msg="job failed" worker=w6.g0 job=212 attempt=1 slot=w6.g0/0 event=failed err="simulated training failure"
+w6.g0 time=2026-11-11T10:20:11.590Z level=INFO msg="job failed" worker=w6.g0 job=282 attempt=1 slot=w6.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:11.65674853Z harness: SIGSTOP w0.g0 (holds job 294) for 8s
+w6.g0 time=2026-11-11T10:20:11.835Z level=INFO msg="job failed" worker=w6.g0 job=308 attempt=1 slot=w6.g0/0 event=failed err="simulated training failure"
+w1.g0 time=2026-11-11T10:20:12.015Z level=INFO msg="job failed" worker=w1.g0 job=329 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:12.786Z level=INFO msg="job failed" worker=w2.g0 job=410 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:13.276971808Z harness: kill -9 w7.g0 (pid 38)
+w7.g1 time=2026-11-11T10:20:13.288Z level=INFO msg="worker started" worker=w7.g1 concurrency=1 lease=5s heartbeat=1s
+w4.g0 time=2026-11-11T10:20:14.347Z level=INFO msg="job failed" worker=w4.g0 job=585 attempt=1 slot=w4.g0/0 event=failed err="simulated training failure"
+w5.g0 time=2026-11-11T10:20:15.208Z level=INFO msg="job failed" worker=w5.g0 job=686 attempt=1 slot=w5.g0/0 event=failed err="simulated training failure"
+w7.g1 time=2026-11-11T10:20:15.374Z level=INFO msg="job failed" worker=w7.g1 job=706 attempt=1 slot=w7.g1/0 event=failed err="simulated training failure"
+w3.g1 time=2026-11-11T10:20:15.483Z level=INFO msg=reaped worker=w3.g1 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:16.18713741Z harness: kill -9 w5.g0 (pid 29)
+w5.g1 time=2026-11-11T10:20:16.198Z level=INFO msg="worker started" worker=w5.g1 concurrency=1 lease=5s heartbeat=1s
+w2.g0 time=2026-11-11T10:20:16.651Z level=INFO msg="job failed" worker=w2.g0 job=869 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:16.747Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+w4.g0 time=2026-11-11T10:20:16.759Z level=INFO msg="job failed" worker=w4.g0 job=887 attempt=1 slot=w4.g0/0 event=failed err="simulated training failure"
+w3.g1 time=2026-11-11T10:20:16.833Z level=INFO msg="job failed" worker=w3.g1 job=883 attempt=1 slot=w3.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:17.428999234Z harness: kill -9 w7.g1 (pid 103)
+w7.g2 time=2026-11-11T10:20:17.442Z level=INFO msg="worker started" worker=w7.g2 concurrency=1 lease=5s heartbeat=1s
+w5.g1 time=2026-11-11T10:20:18.202Z level=INFO msg=reaped worker=w5.g1 event=reaped requeued=1 failed=0
+w2.g0 time=2026-11-11T10:20:18.322Z level=INFO msg="job failed" worker=w2.g0 job=1052 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:18.478Z level=INFO msg="job failed" worker=w2.g0 job=1083 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:18.735356425Z t= 10s posts=1749 kills=4 pauses=1 jumps=0  queued=321 running=9 succeeded=574 failed=18 cancelled=77
+w1.g0 time=2026-11-11T10:20:19.003Z level=INFO msg="job failed" worker=w1.g0 job=1125 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:19.092417869Z harness: SIGSTOP w6.g0 (holds job 1134) for 8s
+w7.g2 time=2026-11-11T10:20:19.586Z level=INFO msg="job failed" worker=w7.g2 job=1184 attempt=1 slot=w7.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:19.657562088Z harness: SIGCONT w0.g0
+w0.g0 time=2026-11-11T10:20:19.668Z level=WARN msg="stale result rejected by fencing" worker=w0.g0 job=294 attempt=1 slot=w0.g0/0 event=stale_commit_rejected
+w7.g2 time=2026-11-11T10:20:19.761Z level=INFO msg="job failed" worker=w7.g2 job=1199 attempt=1 slot=w7.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:19.842909591Z harness: kill -9 w7.g2 (pid 121)
+w7.g3 time=2026-11-11T10:20:19.854Z level=INFO msg="worker started" worker=w7.g3 concurrency=1 lease=5s heartbeat=1s
+w5.g1 time=2026-11-11T10:20:20.076Z level=INFO msg="job failed" worker=w5.g1 job=1246 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+w5.g1 time=2026-11-11T10:20:20.276Z level=INFO msg="job failed" worker=w5.g1 job=1273 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+w5.g1 time=2026-11-11T10:20:21.202Z level=INFO msg=reaped worker=w5.g1 event=reaped requeued=1 failed=0
+w1.g0 time=2026-11-11T10:20:21.334Z level=INFO msg="job failed" worker=w1.g0 job=1389 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+w0.g0 time=2026-11-11T10:20:21.823Z level=INFO msg="job failed" worker=w0.g0 job=1455 attempt=1 slot=w0.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:22.035935121Z harness: SIGSTOP w5.g1 (holds job 1474) for 8s
+w3.g1 time=2026-11-11T10:20:22.484Z level=INFO msg=reaped worker=w3.g1 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:22.690704733Z harness: kill -9 w4.g0 (pid 28)
+w4.g1 time=2026-11-11T10:20:22.702Z level=INFO msg="worker started" worker=w4.g1 concurrency=1 lease=5s heartbeat=1s
+w3.g1 time=2026-11-11T10:20:22.988Z level=INFO msg="job failed" worker=w3.g1 job=1577 attempt=1 slot=w3.g1/0 event=failed err="simulated training failure"
+w4.g1 time=2026-11-11T10:20:23.294Z level=INFO msg="job failed" worker=w4.g1 job=1626 attempt=1 slot=w4.g1/0 event=failed err="simulated training failure"
+w3.g1 time=2026-11-11T10:20:24.483Z level=INFO msg=reaped worker=w3.g1 event=reaped requeued=1 failed=0
+w0.g0 time=2026-11-11T10:20:24.499Z level=INFO msg="job failed" worker=w0.g0 job=1728 attempt=1 slot=w0.g0/0 event=failed err="simulated training failure"
+w7.g3 time=2026-11-11T10:20:24.867Z level=INFO msg=reaped worker=w7.g3 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:24.884909547Z harness: kill -9 w0.g0 (pid 24)
+w0.g1 time=2026-11-11T10:20:24.895Z level=INFO msg="worker started" worker=w0.g1 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:20:26.123573093Z harness: SIGSTOP w4.g1 (holds job 1906) for 8s
+w7.g3 time=2026-11-11T10:20:26.860Z level=INFO msg=reaped worker=w7.g3 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:27.093131088Z harness: SIGCONT w6.g0
+w6.g0 time=2026-11-11T10:20:27.093Z level=WARN msg="stale result rejected by fencing" worker=w6.g0 job=1134 attempt=1 slot=w6.g0/0 event=stale_commit_rejected
+w2.g0 time=2026-11-11T10:20:27.195Z level=INFO msg="job failed" worker=w2.g0 job=1994 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:27.626836944Z harness: kill -9 w6.g0 (pid 34)
+w6.g1 time=2026-11-11T10:20:27.638Z level=INFO msg="worker started" worker=w6.g1 concurrency=1 lease=5s heartbeat=1s
+w2.g0 time=2026-11-11T10:20:27.744Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+w1.g0 time=2026-11-11T10:20:27.862Z level=INFO msg="job failed" worker=w1.g0 job=2053 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+w1.g0 time=2026-11-11T10:20:28.190Z level=INFO msg="job failed" worker=w1.g0 job=2089 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+w0.g1 time=2026-11-11T10:20:28.449Z level=INFO msg="job failed" worker=w0.g1 job=2119 attempt=1 slot=w0.g1/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:28.600Z level=INFO msg="job failed" worker=w2.g0 job=2149 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+w1.g0 time=2026-11-11T10:20:28.658Z level=INFO msg="job failed" worker=w1.g0 job=2143 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:28.737478938Z t= 20s posts=3593 kills=8 pauses=4 jumps=0  queued=705 running=9 succeeded=1070 failed=34 cancelled=182
+w7.g3 time=2026-11-11T10:20:29.004Z level=INFO msg="job failed" worker=w7.g3 job=2177 attempt=1 slot=w7.g3/0 event=failed err="simulated training failure"
+w7.g3 time=2026-11-11T10:20:29.860Z level=INFO msg=reaped worker=w7.g3 event=reaped requeued=1 failed=0
+w1.g0 time=2026-11-11T10:20:29.979Z level=INFO msg="job failed" worker=w1.g0 job=2296 attempt=1 slot=w1.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:29.990496661Z harness: kill -9 w3.g1 (pid 93)
+w3.g2 time=2026-11-11T10:20:30.001Z level=INFO msg="worker started" worker=w3.g2 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:20:30.036880553Z harness: SIGCONT w5.g1
+w5.g1 time=2026-11-11T10:20:30.047Z level=WARN msg="stale result rejected by fencing" worker=w5.g1 job=1474 attempt=1 slot=w5.g1/0 event=stale_commit_rejected
+harness 2026-11-11T10:20:30.236251963Z harness: SIGSTOP w5.g1 (holds job 2327) for 8s
+w6.g1 time=2026-11-11T10:20:31.643Z level=INFO msg=reaped worker=w6.g1 event=reaped requeued=1 failed=0
+w6.g1 time=2026-11-11T10:20:31.973Z level=INFO msg="job failed" worker=w6.g1 job=2492 attempt=1 slot=w6.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:32.46000018Z harness: kill -9 w7.g3 (pid 130)
+w7.g4 time=2026-11-11T10:20:32.471Z level=INFO msg="worker started" worker=w7.g4 concurrency=1 lease=5s heartbeat=1s
+w6.g1 time=2026-11-11T10:20:32.642Z level=INFO msg=reaped worker=w6.g1 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:34.024166139Z harness: SIGSTOP w2.g0 (holds job 2671) for 8s
+harness 2026-11-11T10:20:34.124395817Z harness: SIGCONT w4.g1
+w4.g1 time=2026-11-11T10:20:34.134Z level=WARN msg="stale result rejected by fencing" worker=w4.g1 job=1906 attempt=1 slot=w4.g1/0 event=stale_commit_rejected
+harness 2026-11-11T10:20:34.596357723Z harness: kill -9 w6.g1 (pid 157)
+w6.g2 time=2026-11-11T10:20:34.608Z level=INFO msg="worker started" worker=w6.g2 concurrency=1 lease=5s heartbeat=1s
+w3.g2 time=2026-11-11T10:20:35.006Z level=INFO msg=reaped worker=w3.g2 event=reaped requeued=1 failed=0
+w4.g1 time=2026-11-11T10:20:35.176Z level=INFO msg="job failed" worker=w4.g1 job=2796 attempt=1 slot=w4.g1/0 event=failed err="simulated training failure"
+w7.g4 time=2026-11-11T10:20:35.475Z level=INFO msg=reaped worker=w7.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:36.106782824Z harness: kill -9 w3.g2 (pid 165)
+w3.g3 time=2026-11-11T10:20:36.118Z level=INFO msg="worker started" worker=w3.g3 concurrency=1 lease=5s heartbeat=1s
+w4.g1 time=2026-11-11T10:20:36.545Z level=INFO msg="job failed" worker=w4.g1 job=2941 attempt=1 slot=w4.g1/0 event=failed err="simulated training failure"
+w3.g3 time=2026-11-11T10:20:37.098Z level=INFO msg="job failed" worker=w3.g3 job=2982 attempt=1 slot=w3.g3/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:37.130979238Z harness: kill -9 w4.g1 (pid 140)
+w4.g2 time=2026-11-11T10:20:37.142Z level=INFO msg="worker started" worker=w4.g2 concurrency=1 lease=5s heartbeat=1s
+w7.g4 time=2026-11-11T10:20:37.475Z level=INFO msg=reaped worker=w7.g4 event=reaped requeued=1 failed=0
+w0.g1 time=2026-11-11T10:20:37.524Z level=INFO msg="job failed" worker=w0.g1 job=3037 attempt=1 slot=w0.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:38.236687472Z harness: SIGCONT w5.g1
+w5.g1 time=2026-11-11T10:20:38.325Z level=WARN msg="stale result rejected by fencing" worker=w5.g1 job=2327 attempt=1 slot=w5.g1/0 event=stale_commit_rejected
+harness 2026-11-11T10:20:38.469332635Z harness: kill -9 w7.g4 (pid 173)
+w7.g5 time=2026-11-11T10:20:38.481Z level=INFO msg="worker started" worker=w7.g5 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:20:38.597299443Z harness: SIGSTOP w6.g2 (holds job 3175) for 8s
+w4.g2 time=2026-11-11T10:20:38.682Z level=INFO msg="job failed" worker=w4.g2 job=3185 attempt=1 slot=w4.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:38.739789829Z t= 30s posts=5583 kills=14 pauses=7 jumps=0  queued=1115 running=12 succeeded=1550 failed=42 cancelled=281
+w3.g3 time=2026-11-11T10:20:39.120Z level=INFO msg=reaped worker=w3.g3 event=reaped requeued=1 failed=0
+w7.g5 time=2026-11-11T10:20:39.380Z level=INFO msg="job failed" worker=w7.g5 job=3244 attempt=1 slot=w7.g5/0 event=failed err="simulated training failure"
+w1.g0 time=2026-11-11T10:20:39.747Z level=INFO msg=reaped worker=w1.g0 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:39.774600644Z harness: kill -9 w3.g3 (pid 189)
+w3.g4 time=2026-11-11T10:20:39.786Z level=INFO msg="worker started" worker=w3.g4 concurrency=1 lease=5s heartbeat=1s
+w4.g2 time=2026-11-11T10:20:41.148Z level=INFO msg=reaped worker=w4.g2 event=reaped requeued=1 failed=0
+w7.g5 time=2026-11-11T10:20:41.160Z level=INFO msg="job failed" worker=w7.g5 job=3406 attempt=1 slot=w7.g5/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:41.764943255Z harness: SIGSTOP w3.g4 (holds job 3475) for 8s
+harness 2026-11-11T10:20:41.855007533Z harness: kill -9 w4.g2 (pid 197)
+w4.g3 time=2026-11-11T10:20:41.866Z level=INFO msg="worker started" worker=w4.g3 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:20:42.025083412Z harness: SIGCONT w2.g0
+w2.g0 time=2026-11-11T10:20:42.025Z level=WARN msg="stale result rejected by fencing" worker=w2.g0 job=2671 attempt=1 slot=w2.g0/0 event=stale_commit_rejected
+w5.g1 time=2026-11-11T10:20:42.058Z level=INFO msg="job failed" worker=w5.g1 job=3483 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+w5.g1 time=2026-11-11T10:20:42.200Z level=INFO msg=reaped worker=w5.g1 event=reaped requeued=1 failed=0
+w7.g5 time=2026-11-11T10:20:43.487Z level=INFO msg=reaped worker=w7.g5 event=reaped requeued=1 failed=0
+w2.g0 time=2026-11-11T10:20:43.745Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+w4.g3 time=2026-11-11T10:20:43.843Z level=INFO msg="job failed" worker=w4.g3 job=3654 attempt=1 slot=w4.g3/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:44.745Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:44.852982788Z harness: kill -9 w4.g3 (pid 222)
+w4.g4 time=2026-11-11T10:20:44.865Z level=INFO msg="worker started" worker=w4.g4 concurrency=1 lease=5s heartbeat=1s
+w7.g5 time=2026-11-11T10:20:45.865Z level=INFO msg="job failed" worker=w7.g5 job=3879 attempt=1 slot=w7.g5/0 event=failed err="simulated training failure"
+w5.g1 time=2026-11-11T10:20:46.528Z level=INFO msg="job failed" worker=w5.g1 job=3966 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:46.59844445Z harness: SIGCONT w6.g2
+w6.g2 time=2026-11-11T10:20:46.607Z level=WARN msg="stale result rejected by fencing" worker=w6.g2 job=3175 attempt=1 slot=w6.g2/0 event=stale_commit_rejected
+w4.g4 time=2026-11-11T10:20:46.652Z level=INFO msg="job failed" worker=w4.g4 job=3993 attempt=1 slot=w4.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:46.718241201Z harness: SIGSTOP w5.g1 (holds job 4003) for 8s
+w4.g4 time=2026-11-11T10:20:46.868Z level=INFO msg=reaped worker=w4.g4 event=reaped requeued=2 failed=0
+w2.g0 time=2026-11-11T10:20:47.533Z level=INFO msg="job failed" worker=w2.g0 job=4069 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:47.678736249Z harness: kill -9 w4.g4 (pid 233)
+w4.g5 time=2026-11-11T10:20:47.689Z level=INFO msg="worker started" worker=w4.g5 concurrency=1 lease=5s heartbeat=1s
+w6.g2 time=2026-11-11T10:20:48.438Z level=INFO msg="job failed" worker=w6.g2 job=4170 attempt=1 slot=w6.g2/0 event=failed err="simulated training failure"
+w6.g2 time=2026-11-11T10:20:48.476Z level=INFO msg="job failed" worker=w6.g2 job=4192 attempt=1 slot=w6.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:48.742745855Z t= 40s posts=7547 kills=18 pauses=9 jumps=0  queued=1528 running=9 succeeded=2025 failed=52 cancelled=386
+w2.g0 time=2026-11-11T10:20:49.297Z level=INFO msg="job failed" worker=w2.g0 job=4271 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:49.303362959Z harness: SIGSTOP w4.g5 (holds job 4278) for 8s
+harness 2026-11-11T10:20:49.36076281Z harness: kill -9 w6.g2 (pid 181)
+w6.g3 time=2026-11-11T10:20:49.373Z level=INFO msg="worker started" worker=w6.g3 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:20:49.765192336Z harness: SIGCONT w3.g4
+w3.g4 time=2026-11-11T10:20:49.774Z level=WARN msg="stale result rejected by fencing" worker=w3.g4 job=3475 attempt=1 slot=w3.g4/0 event=stale_commit_rejected
+w0.g1 time=2026-11-11T10:20:49.901Z level=INFO msg=reaped worker=w0.g1 event=reaped requeued=1 failed=0
+w2.g0 time=2026-11-11T10:20:50.198Z level=INFO msg="job failed" worker=w2.g0 job=4351 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+w3.g4 time=2026-11-11T10:20:50.458Z level=INFO msg="job failed" worker=w3.g4 job=4379 attempt=1 slot=w3.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:51.079626585Z harness: kill -9 w1.g0 (pid 25)
+w1.g1 time=2026-11-11T10:20:51.091Z level=INFO msg="worker started" worker=w1.g1 concurrency=1 lease=5s heartbeat=1s
+w2.g0 time=2026-11-11T10:20:51.746Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+w2.g0 time=2026-11-11T10:20:52.744Z level=INFO msg=reaped worker=w2.g0 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:53.322616378Z harness: kill -9 w7.g5 (pid 206)
+w7.g6 time=2026-11-11T10:20:53.333Z level=INFO msg="worker started" worker=w7.g6 concurrency=1 lease=5s heartbeat=1s
+w6.g3 time=2026-11-11T10:20:53.586Z level=INFO msg="job failed" worker=w6.g3 job=4750 attempt=1 slot=w6.g3/0 event=failed err="simulated training failure"
+w6.g3 time=2026-11-11T10:20:53.831Z level=INFO msg="job failed" worker=w6.g3 job=4788 attempt=1 slot=w6.g3/0 event=failed err="simulated training failure"
+w0.g1 time=2026-11-11T10:20:53.990Z level=INFO msg="job failed" worker=w0.g1 job=4791 attempt=1 slot=w0.g1/0 event=failed err="simulated training failure"
+w7.g6 time=2026-11-11T10:20:54.346Z level=INFO msg=reaped worker=w7.g6 event=reaped requeued=2 failed=0
+harness 2026-11-11T10:20:54.718966038Z harness: SIGCONT w5.g1
+w5.g1 time=2026-11-11T10:20:54.720Z level=WARN msg="stale result rejected by fencing" worker=w5.g1 job=4003 attempt=1 slot=w5.g1/0 event=stale_commit_rejected
+harness 2026-11-11T10:20:55.528116769Z harness: SIGSTOP w5.g1 (holds job 4993) for 8s
+harness 2026-11-11T10:20:55.550314329Z harness: kill -9 w7.g6 (pid 271)
+w7.g7 time=2026-11-11T10:20:55.562Z level=INFO msg="worker started" worker=w7.g7 concurrency=1 lease=5s heartbeat=1s
+w1.g1 time=2026-11-11T10:20:56.093Z level=INFO msg=reaped worker=w1.g1 event=reaped requeued=1 failed=0
+w1.g1 time=2026-11-11T10:20:56.961Z level=INFO msg="job failed" worker=w1.g1 job=5143 attempt=1 slot=w1.g1/0 event=failed err="simulated training failure"
+w2.g0 time=2026-11-11T10:20:57.103Z level=INFO msg="job failed" worker=w2.g0 job=5163 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:57.303744418Z harness: SIGCONT w4.g5
+w4.g5 time=2026-11-11T10:20:57.312Z level=WARN msg="stale result rejected by fencing" worker=w4.g5 job=4278 attempt=1 slot=w4.g5/0 event=stale_commit_rejected
+w7.g7 time=2026-11-11T10:20:57.590Z level=INFO msg="job failed" worker=w7.g7 job=5225 attempt=1 slot=w7.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:20:58.331946252Z harness: kill -9 w4.g5 (pid 242)
+w4.g6 time=2026-11-11T10:20:58.344Z level=INFO msg="worker started" worker=w4.g6 concurrency=1 lease=5s heartbeat=1s
+w6.g3 time=2026-11-11T10:20:58.375Z level=INFO msg=reaped worker=w6.g3 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:20:58.745678014Z t= 50s posts=9442 kills=23 pauses=11 jumps=0  queued=1909 running=10 succeeded=2540 failed=61 cancelled=480
+w7.g7 time=2026-11-11T10:20:59.997Z level=INFO msg="job failed" worker=w7.g7 job=5517 attempt=1 slot=w7.g7/0 event=failed err="simulated training failure"
+w0.g1 time=2026-11-11T10:21:00.034Z level=INFO msg="job failed" worker=w0.g1 job=5531 attempt=1 slot=w0.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:00.442211189Z harness: kill -9 w6.g3 (pid 252)
+w6.g4 time=2026-11-11T10:21:00.453Z level=INFO msg="worker started" worker=w6.g4 concurrency=1 lease=5s heartbeat=1s
+w7.g7 time=2026-11-11T10:21:00.566Z level=INFO msg=reaped worker=w7.g7 event=reaped requeued=2 failed=0
+w0.g1 time=2026-11-11T10:21:00.602Z level=INFO msg="job failed" worker=w0.g1 job=5608 attempt=1 slot=w0.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:00.951691322Z harness: SIGSTOP w6.g4 (holds job 5635) for 8s
+harness 2026-11-11T10:21:03.221456408Z harness: kill -9 w4.g6 (pid 291)
+w4.g7 time=2026-11-11T10:21:03.232Z level=INFO msg="worker started" worker=w4.g7 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:21:03.528701753Z harness: SIGCONT w5.g1
+w5.g1 time=2026-11-11T10:21:03.529Z level=WARN msg="stale result rejected by fencing" worker=w5.g1 job=4993 attempt=1 slot=w5.g1/0 event=stale_commit_rejected
+w5.g1 time=2026-11-11T10:21:03.531Z level=INFO msg=reaped worker=w5.g1 event=reaped requeued=1 failed=0
+w2.g0 time=2026-11-11T10:21:04.302Z level=INFO msg="job failed" worker=w2.g0 job=6046 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:05.53251648Z harness: SIGSTOP w4.g7 (holds job 6217) for 8s
+w7.g7 time=2026-11-11T10:21:05.569Z level=INFO msg=reaped worker=w7.g7 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:05.602023994Z harness: kill -9 w0.g1 (pid 148)
+w0.g2 time=2026-11-11T10:21:05.613Z level=INFO msg="worker started" worker=w0.g2 concurrency=1 lease=5s heartbeat=1s
+w3.g4 time=2026-11-11T10:21:05.790Z level=INFO msg=reaped worker=w3.g4 event=reaped requeued=1 failed=0
+w0.g2 time=2026-11-11T10:21:06.240Z level=INFO msg="job failed" worker=w0.g2 job=6274 attempt=1 slot=w0.g2/0 event=failed err="simulated training failure"
+w0.g2 time=2026-11-11T10:21:07.094Z level=INFO msg="job failed" worker=w0.g2 job=6359 attempt=1 slot=w0.g2/0 event=failed err="simulated training failure"
+w1.g1 time=2026-11-11T10:21:07.855Z level=INFO msg="job failed" worker=w1.g1 job=6434 attempt=1 slot=w1.g1/0 event=failed err="simulated training failure"
+w1.g1 time=2026-11-11T10:21:08.094Z level=INFO msg=reaped worker=w1.g1 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:08.472377975Z harness: kill -9 w7.g7 (pid 280)
+w1.g1 time=2026-11-11T10:21:08.483Z level=INFO msg="job failed" worker=w1.g1 job=6537 attempt=1 slot=w1.g1/0 event=failed err="simulated training failure"
+w7.g8 time=2026-11-11T10:21:08.483Z level=INFO msg="worker started" worker=w7.g8 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:21:08.749788966Z t= 60s posts=11262 kills=27 pauses=13 jumps=0  queued=2287 running=9 succeeded=3078 failed=69 cancelled=558
+harness 2026-11-11T10:21:08.952393507Z harness: SIGCONT w6.g4
+w6.g4 time=2026-11-11T10:21:08.954Z level=WARN msg="stale result rejected by fencing" worker=w6.g4 job=5635 attempt=1 slot=w6.g4/0 event=stale_commit_rejected
+w5.g1 time=2026-11-11T10:21:09.465Z level=INFO msg="job failed" worker=w5.g1 job=6667 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:09.929732276Z harness: kill -9 w6.g4 (pid 300)
+w6.g5 time=2026-11-11T10:21:09.942Z level=INFO msg="worker started" worker=w6.g5 concurrency=1 lease=5s heartbeat=1s
+w1.g1 time=2026-11-11T10:21:10.132Z level=INFO msg="job failed" worker=w1.g1 job=6743 attempt=1 slot=w1.g1/0 event=failed err="simulated training failure"
+w0.g2 time=2026-11-11T10:21:10.617Z level=INFO msg=reaped worker=w0.g2 event=reaped requeued=2 failed=0
+w7.g8 time=2026-11-11T10:21:11.380Z level=INFO msg="job failed" worker=w7.g8 job=6933 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:11.387181316Z harness: kill -9 w1.g1 (pid 262)
+w1.g2 time=2026-11-11T10:21:11.397Z level=INFO msg="worker started" worker=w1.g2 concurrency=1 lease=5s heartbeat=1s
+w2.g0 time=2026-11-11T10:21:11.488Z level=INFO msg="job failed" worker=w2.g0 job=6939 attempt=1 slot=w2.g0/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:11.556871069Z harness: SIGSTOP w3.g4 (holds job 6959) for 8s
+w5.g1 time=2026-11-11T10:21:12.728Z level=INFO msg="job failed" worker=w5.g1 job=7095 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:13.07509682Z harness: kill -9 w2.g0 (pid 26)
+w2.g1 time=2026-11-11T10:21:13.087Z level=INFO msg="worker started" worker=w2.g1 concurrency=1 lease=5s heartbeat=1s
+w1.g2 time=2026-11-11T10:21:13.400Z level=INFO msg=reaped worker=w1.g2 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:13.533004951Z harness: SIGCONT w4.g7
+w5.g1 time=2026-11-11T10:21:13.536Z level=INFO msg="job failed" worker=w5.g1 job=7196 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+w4.g7 time=2026-11-11T10:21:13.542Z level=WARN msg="stale result rejected by fencing" worker=w4.g7 job=6217 attempt=1 slot=w4.g7/0 event=stale_commit_rejected
+w1.g2 time=2026-11-11T10:21:13.569Z level=INFO msg="job failed" worker=w1.g2 job=7200 attempt=1 slot=w1.g2/0 event=failed err="simulated training failure"
+w6.g5 time=2026-11-11T10:21:13.651Z level=INFO msg="job failed" worker=w6.g5 job=7213 attempt=1 slot=w6.g5/0 event=failed err="simulated training failure"
+w7.g8 time=2026-11-11T10:21:14.691Z level=INFO msg="job failed" worker=w7.g8 job=7316 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:14.925400463Z harness: SIGSTOP w1.g2 (holds job 7376) for 8s
+w6.g5 time=2026-11-11T10:21:14.945Z level=INFO msg=reaped worker=w6.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:14.975767276Z harness: kill -9 w4.g7 (pid 310)
+w4.g8 time=2026-11-11T10:21:14.986Z level=INFO msg="worker started" worker=w4.g8 concurrency=1 lease=5s heartbeat=1s
+w7.g8 time=2026-11-11T10:21:16.486Z level=INFO msg=reaped worker=w7.g8 event=reaped requeued=2 failed=0
+harness 2026-11-11T10:21:17.014512634Z harness: kill -9 w2.g1 (pid 352)
+w2.g2 time=2026-11-11T10:21:17.026Z level=INFO msg="worker started" worker=w2.g2 concurrency=1 lease=5s heartbeat=1s
+w5.g1 time=2026-11-11T10:21:18.202Z level=INFO msg=reaped worker=w5.g1 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:18.753284438Z t= 70s posts=13150 kills=32 pauses=15 jumps=0  queued=2658 running=9 succeeded=3609 failed=78 cancelled=647
+w4.g8 time=2026-11-11T10:21:18.837Z level=INFO msg="job failed" worker=w4.g8 job=7748 attempt=1 slot=w4.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:19.421269184Z harness: kill -9 w4.g8 (pid 361)
+w4.g9 time=2026-11-11T10:21:19.433Z level=INFO msg="worker started" worker=w4.g9 concurrency=1 lease=5s heartbeat=1s
+w7.g8 time=2026-11-11T10:21:19.541Z level=INFO msg="job failed" worker=w7.g8 job=7822 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:19.557373158Z harness: SIGCONT w3.g4
+w3.g4 time=2026-11-11T10:21:19.558Z level=WARN msg="stale result rejected by fencing" worker=w3.g4 job=6959 attempt=1 slot=w3.g4/0 event=stale_commit_rejected
+w6.g5 time=2026-11-11T10:21:19.945Z level=INFO msg=reaped worker=w6.g5 event=reaped requeued=1 failed=0
+w2.g2 time=2026-11-11T10:21:20.030Z level=INFO msg=reaped worker=w2.g2 event=reaped requeued=1 failed=0
+w2.g2 time=2026-11-11T10:21:20.221Z level=INFO msg="job failed" worker=w2.g2 job=7898 attempt=1 slot=w2.g2/0 event=failed err="simulated training failure"
+w3.g4 time=2026-11-11T10:21:20.613Z level=INFO msg="job failed" worker=w3.g4 job=7952 attempt=1 slot=w3.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:21.635222163Z harness: SIGSTOP w3.g4 (holds job 8058) for 8s
+w6.g5 time=2026-11-11T10:21:21.948Z level=INFO msg=reaped worker=w6.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:22.094077847Z harness: kill -9 w0.g2 (pid 318)
+w0.g3 time=2026-11-11T10:21:22.106Z level=INFO msg="worker started" worker=w0.g3 concurrency=1 lease=5s heartbeat=1s
+w4.g9 time=2026-11-11T10:21:22.114Z level=INFO msg="job failed" worker=w4.g9 job=7564 attempt=2 slot=w4.g9/0 event=failed err="simulated training failure"
+w4.g9 time=2026-11-11T10:21:22.436Z level=INFO msg="job failed" worker=w4.g9 job=8140 attempt=1 slot=w4.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:22.925933591Z harness: SIGCONT w1.g2
+w1.g2 time=2026-11-11T10:21:22.936Z level=WARN msg="stale result rejected by fencing" worker=w1.g2 job=7376 attempt=1 slot=w1.g2/0 event=stale_commit_rejected
+w1.g2 time=2026-11-11T10:21:23.201Z level=INFO msg="job failed" worker=w1.g2 job=8220 attempt=1 slot=w1.g2/0 event=failed err="simulated training failure"
+w5.g1 time=2026-11-11T10:21:23.986Z level=INFO msg="job failed" worker=w5.g1 job=8321 attempt=1 slot=w5.g1/0 event=failed err="simulated training failure"
+w1.g2 time=2026-11-11T10:21:24.402Z level=INFO msg=reaped worker=w1.g2 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:24.880006989Z harness: kill -9 w5.g1 (pid 112)
+w5.g2 time=2026-11-11T10:21:24.890Z level=INFO msg="worker started" worker=w5.g2 concurrency=1 lease=5s heartbeat=1s
+w5.g2 time=2026-11-11T10:21:24.982Z level=INFO msg="job failed" worker=w5.g2 job=8424 attempt=1 slot=w5.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:25.033885515Z harness: SIGSTOP w2.g2 (holds job 8438) for 8s
+w5.g2 time=2026-11-11T10:21:25.921Z level=INFO msg="job failed" worker=w5.g2 job=8519 attempt=1 slot=w5.g2/0 event=failed err="simulated training failure"
+w0.g3 time=2026-11-11T10:21:25.938Z level=INFO msg="job failed" worker=w0.g3 job=8512 attempt=1 slot=w0.g3/0 event=failed err="simulated training failure"
+w1.g2 time=2026-11-11T10:21:26.129Z level=INFO msg="job failed" worker=w1.g2 job=8541 attempt=1 slot=w1.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:26.603430517Z harness: kill -9 w1.g2 (pid 344)
+w1.g3 time=2026-11-11T10:21:26.616Z level=INFO msg="worker started" worker=w1.g3 concurrency=1 lease=5s heartbeat=1s
+w5.g2 time=2026-11-11T10:21:26.893Z level=INFO msg=reaped worker=w5.g2 event=reaped requeued=1 failed=0
+w0.g3 time=2026-11-11T10:21:27.109Z level=INFO msg=reaped worker=w0.g3 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:28.085294008Z harness: kill -9 w1.g3 (pid 408)
+w1.g4 time=2026-11-11T10:21:28.097Z level=INFO msg="worker started" worker=w1.g4 concurrency=1 lease=5s heartbeat=1s
+w0.g3 time=2026-11-11T10:21:28.696Z level=INFO msg="job failed" worker=w0.g3 job=8829 attempt=1 slot=w0.g3/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:28.756660958Z t= 80s posts=15062 kills=37 pauses=17 jumps=0  queued=3020 running=10 succeeded=4133 failed=91 cancelled=747
+w1.g4 time=2026-11-11T10:21:28.875Z level=INFO msg="job failed" worker=w1.g4 job=8836 attempt=1 slot=w1.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:29.280800212Z harness: kill -9 w0.g3 (pid 390)
+w0.g4 time=2026-11-11T10:21:29.292Z level=INFO msg="worker started" worker=w0.g4 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:21:29.636322832Z harness: SIGCONT w3.g4
+w3.g4 time=2026-11-11T10:21:29.637Z level=WARN msg="stale result rejected by fencing" worker=w3.g4 job=8058 attempt=1 slot=w3.g4/0 event=stale_commit_rejected
+w5.g2 time=2026-11-11T10:21:29.893Z level=INFO msg=reaped worker=w5.g2 event=reaped requeued=1 failed=0
+w5.g2 time=2026-11-11T10:21:29.906Z level=INFO msg="job failed" worker=w5.g2 job=8951 attempt=1 slot=w5.g2/0 event=failed err="simulated training failure"
+w1.g4 time=2026-11-11T10:21:30.103Z level=INFO msg=reaped worker=w1.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:30.65434513Z harness: SIGSTOP w4.g9 (holds job 9059) for 8s
+harness 2026-11-11T10:21:30.910402828Z harness: kill -9 w1.g4 (pid 416)
+w1.g5 time=2026-11-11T10:21:30.923Z level=INFO msg="worker started" worker=w1.g5 concurrency=1 lease=5s heartbeat=1s
+w3.g4 time=2026-11-11T10:21:31.789Z level=INFO msg=reaped worker=w3.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:32.819891147Z harness: kill -9 w5.g2 (pid 399)
+w5.g3 time=2026-11-11T10:21:32.831Z level=INFO msg="worker started" worker=w5.g3 concurrency=1 lease=5s heartbeat=1s
+w1.g5 time=2026-11-11T10:21:32.926Z level=INFO msg=reaped worker=w1.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:33.034331369Z harness: SIGCONT w2.g2
+w2.g2 time=2026-11-11T10:21:33.035Z level=WARN msg="stale result rejected by fencing" worker=w2.g2 job=8438 attempt=1 slot=w2.g2/0 event=stale_commit_rejected
+w0.g4 time=2026-11-11T10:21:33.912Z level=INFO msg="job failed" worker=w0.g4 job=9453 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:34.056209521Z harness: SIGSTOP w2.g2 (holds job 9482) for 8s
+w0.g4 time=2026-11-11T10:21:34.295Z level=INFO msg=reaped worker=w0.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:34.363768297Z harness: kill -9 w3.g4 (pid 214)
+w3.g5 time=2026-11-11T10:21:34.375Z level=INFO msg="worker started" worker=w3.g5 concurrency=1 lease=5s heartbeat=1s
+w3.g5 time=2026-11-11T10:21:34.437Z level=INFO msg="job failed" worker=w3.g5 job=9535 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w5.g3 time=2026-11-11T10:21:34.565Z level=INFO msg="job failed" worker=w5.g3 job=9546 attempt=1 slot=w5.g3/0 event=failed err="simulated training failure"
+w5.g3 time=2026-11-11T10:21:35.598Z level=INFO msg="job failed" worker=w5.g3 job=9632 attempt=1 slot=w5.g3/0 event=failed err="simulated training failure"
+w6.g5 time=2026-11-11T10:21:35.645Z level=INFO msg="job failed" worker=w6.g5 job=9630 attempt=1 slot=w6.g5/0 event=failed err="simulated training failure"
+w5.g3 time=2026-11-11T10:21:35.834Z level=INFO msg=reaped worker=w5.g3 event=reaped requeued=1 failed=0
+w1.g5 time=2026-11-11T10:21:35.926Z level=INFO msg=reaped worker=w1.g5 event=reaped requeued=1 failed=0
+w7.g8 time=2026-11-11T10:21:36.609Z level=INFO msg="job failed" worker=w7.g8 job=9706 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+w7.g8 time=2026-11-11T10:21:36.812Z level=INFO msg="job failed" worker=w7.g8 job=9725 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:36.824500584Z harness: kill -9 w6.g5 (pid 336)
+w6.g6 time=2026-11-11T10:21:36.837Z level=INFO msg="worker started" worker=w6.g6 concurrency=1 lease=5s heartbeat=1s
+w5.g3 time=2026-11-11T10:21:37.834Z level=INFO msg=reaped worker=w5.g3 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:38.117983655Z harness: SIGSTOP w6.g6 (holds job 9861) for 8s
+harness 2026-11-11T10:21:38.654546986Z harness: SIGCONT w4.g9
+w4.g9 time=2026-11-11T10:21:38.756Z level=WARN msg="stale result rejected by fencing" worker=w4.g9 job=9083 attempt=1 slot=w4.g9/0 event=stale_commit_rejected
+harness 2026-11-11T10:21:38.761017563Z t= 90s posts=16985 kills=42 pauses=20 jumps=0  queued=3377 running=8 succeeded=4649 failed=100 cancelled=868
+w1.g5 time=2026-11-11T10:21:38.801Z level=INFO msg="job failed" worker=w1.g5 job=9898 attempt=1 slot=w1.g5/0 event=failed err="simulated training failure"
+w0.g4 time=2026-11-11T10:21:39.294Z level=INFO msg=reaped worker=w0.g4 event=reaped requeued=1 failed=0
+w3.g5 time=2026-11-11T10:21:39.377Z level=INFO msg=reaped worker=w3.g5 event=reaped requeued=1 failed=0
+w7.g8 time=2026-11-11T10:21:39.744Z level=INFO msg="job failed" worker=w7.g8 job=9983 attempt=1 slot=w7.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:39.806598098Z harness: kill -9 w4.g9 (pid 378)
+w4.g10 time=2026-11-11T10:21:39.818Z level=INFO msg="worker started" worker=w4.g10 concurrency=1 lease=5s heartbeat=1s
+w1.g5 time=2026-11-11T10:21:39.995Z level=INFO msg="job failed" worker=w1.g5 job=10013 attempt=1 slot=w1.g5/0 event=failed err="simulated training failure"
+w0.g4 time=2026-11-11T10:21:41.288Z level=INFO msg="job failed" worker=w0.g4 job=10175 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+w4.g10 time=2026-11-11T10:21:41.822Z level=INFO msg=reaped worker=w4.g10 event=reaped requeued=1 failed=0
+w5.g3 time=2026-11-11T10:21:41.966Z level=INFO msg="job failed" worker=w5.g3 job=10246 attempt=1 slot=w5.g3/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:42.057182608Z harness: SIGCONT w2.g2
+w2.g2 time=2026-11-11T10:21:42.057Z level=WARN msg="stale result rejected by fencing" worker=w2.g2 job=9482 attempt=1 slot=w2.g2/0 event=stale_commit_rejected
+harness 2026-11-11T10:21:42.799114701Z harness: kill -9 w7.g8 (pid 327)
+w7.g9 time=2026-11-11T10:21:42.811Z level=INFO msg="worker started" worker=w7.g9 concurrency=1 lease=5s heartbeat=1s
+w5.g3 time=2026-11-11T10:21:43.966Z level=INFO msg="job failed" worker=w5.g3 job=10478 attempt=1 slot=w5.g3/0 event=failed err="simulated training failure"
+w2.g2 time=2026-11-11T10:21:44.188Z level=INFO msg="job failed" worker=w2.g2 job=10508 attempt=1 slot=w2.g2/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:44.77791882Z harness: SIGSTOP w7.g9 (holds job 10570) for 8s
+w4.g10 time=2026-11-11T10:21:44.821Z level=INFO msg=reaped worker=w4.g10 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:44.973768455Z harness: kill -9 w4.g10 (pid 467)
+w4.g11 time=2026-11-11T10:21:44.986Z level=INFO msg="worker started" worker=w4.g11 concurrency=1 lease=5s heartbeat=1s
+w1.g5 time=2026-11-11T10:21:45.724Z level=INFO msg="job failed" worker=w1.g5 job=10669 attempt=1 slot=w1.g5/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:46.118576581Z harness: SIGCONT w6.g6
+harness 2026-11-11T10:21:46.265419553Z harness: kill -9 w2.g2 (pid 370)
+w2.g3 time=2026-11-11T10:21:46.276Z level=INFO msg="worker started" worker=w2.g3 concurrency=1 lease=5s heartbeat=1s
+w5.g3 time=2026-11-11T10:21:47.835Z level=INFO msg=reaped worker=w5.g3 event=reaped requeued=1 failed=0
+w3.g5 time=2026-11-11T10:21:48.214Z level=INFO msg="job failed" worker=w3.g5 job=10932 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w6.g6 time=2026-11-11T10:21:48.411Z level=INFO msg="job failed" worker=w6.g6 job=10956 attempt=1 slot=w6.g6/0 event=failed err="simulated training failure"
+w4.g11 time=2026-11-11T10:21:48.526Z level=INFO msg="job failed" worker=w4.g11 job=10966 attempt=1 slot=w4.g11/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:48.765185358Z t=100s posts=18954 kills=46 pauses=21 jumps=0  queued=3729 running=10 succeeded=5176 failed=111 cancelled=974
+harness 2026-11-11T10:21:49.016323944Z harness: kill -9 w5.g3 (pid 442)
+w5.g4 time=2026-11-11T10:21:49.028Z level=INFO msg="worker started" worker=w5.g4 concurrency=1 lease=5s heartbeat=1s
+w3.g5 time=2026-11-11T10:21:49.198Z level=INFO msg="job failed" worker=w3.g5 job=11039 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w6.g6 time=2026-11-11T10:21:49.840Z level=INFO msg=reaped worker=w6.g6 event=reaped requeued=1 failed=0
+w1.g5 time=2026-11-11T10:21:49.929Z level=INFO msg=reaped worker=w1.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:50.460739601Z harness: SIGSTOP w6.g6 (holds job 11173) for 8s
+harness 2026-11-11T10:21:50.705829311Z harness: kill -9 w1.g5 (pid 432)
+w1.g6 time=2026-11-11T10:21:50.717Z level=INFO msg="worker started" worker=w1.g6 concurrency=1 lease=5s heartbeat=1s
+w2.g3 time=2026-11-11T10:21:51.279Z level=INFO msg=reaped worker=w2.g3 event=reaped requeued=1 failed=0
+w0.g4 time=2026-11-11T10:21:51.381Z level=INFO msg="job failed" worker=w0.g4 job=11258 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+w0.g4 time=2026-11-11T10:21:52.712Z level=INFO msg="job failed" worker=w0.g4 job=11373 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:52.778489272Z harness: SIGCONT w7.g9
+w7.g9 time=2026-11-11T10:21:52.789Z level=WARN msg="stale result rejected by fencing" worker=w7.g9 job=10570 attempt=1 slot=w7.g9/0 event=stale_commit_rejected
+harness 2026-11-11T10:21:52.879087414Z harness: kill -9 w5.g4 (pid 503)
+w5.g5 time=2026-11-11T10:21:52.891Z level=INFO msg="worker started" worker=w5.g5 concurrency=1 lease=5s heartbeat=1s
+w3.g5 time=2026-11-11T10:21:52.942Z level=INFO msg="job failed" worker=w3.g5 job=11423 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:53.27678597Z harness: SIGSTOP w3.g5 (holds job 11450) for 8s
+w1.g6 time=2026-11-11T10:21:53.867Z level=INFO msg="job failed" worker=w1.g6 job=11494 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w5.g5 time=2026-11-11T10:21:53.897Z level=INFO msg=reaped worker=w5.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:54.026230311Z harness: kill -9 w7.g9 (pid 476)
+w7.g10 time=2026-11-11T10:21:54.038Z level=INFO msg="worker started" worker=w7.g10 concurrency=1 lease=5s heartbeat=1s
+w1.g6 time=2026-11-11T10:21:54.415Z level=INFO msg="job failed" worker=w1.g6 job=11546 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:55.552637383Z harness: kill -9 w7.g10 (pid 529)
+w7.g11 time=2026-11-11T10:21:55.565Z level=INFO msg="worker started" worker=w7.g11 concurrency=1 lease=5s heartbeat=1s
+w1.g6 time=2026-11-11T10:21:55.721Z level=INFO msg=reaped worker=w1.g6 event=reaped requeued=2 failed=0
+w2.g3 time=2026-11-11T10:21:56.600Z level=INFO msg="job failed" worker=w2.g3 job=11767 attempt=1 slot=w2.g3/0 event=failed err="simulated training failure"
+w7.g11 time=2026-11-11T10:21:56.859Z level=INFO msg="job failed" worker=w7.g11 job=11787 attempt=1 slot=w7.g11/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:21:57.324698218Z harness: kill -9 w2.g3 (pid 494)
+w2.g4 time=2026-11-11T10:21:57.338Z level=INFO msg="worker started" worker=w2.g4 concurrency=1 lease=5s heartbeat=1s
+w5.g5 time=2026-11-11T10:21:57.896Z level=INFO msg=reaped worker=w5.g5 event=reaped requeued=1 failed=0
+w0.g4 time=2026-11-11T10:21:58.285Z level=INFO msg="job failed" worker=w0.g4 job=11931 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+w0.g4 time=2026-11-11T10:21:58.297Z level=INFO msg=reaped worker=w0.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:58.461611364Z harness: SIGCONT w6.g6
+w6.g6 time=2026-11-11T10:21:58.462Z level=WARN msg="stale result rejected by fencing" worker=w6.g6 job=11173 attempt=1 slot=w6.g6/0 event=stale_commit_rejected
+harness 2026-11-11T10:21:58.770667115Z t=110s posts=19191 kills=52 pauses=23 jumps=0  queued=3210 running=10 succeeded=5668 failed=120 cancelled=992
+w4.g11 time=2026-11-11T10:21:58.991Z level=INFO msg=reaped worker=w4.g11 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:21:59.540682007Z harness: kill -9 w6.g6 (pid 458)
+w6.g7 time=2026-11-11T10:21:59.554Z level=INFO msg="worker started" worker=w6.g7 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:00.072922689Z harness: SIGSTOP w7.g11 (holds job 12141) for 8s
+w4.g11 time=2026-11-11T10:22:00.480Z level=INFO msg="job failed" worker=w4.g11 job=12168 attempt=1 slot=w4.g11/0 event=failed err="simulated training failure"
+w6.g7 time=2026-11-11T10:22:00.542Z level=INFO msg="job failed" worker=w6.g7 job=12173 attempt=1 slot=w6.g7/0 event=failed err="simulated training failure"
+w6.g7 time=2026-11-11T10:22:00.561Z level=INFO msg=reaped worker=w6.g7 event=reaped requeued=1 failed=0
+w6.g7 time=2026-11-11T10:22:01.148Z level=INFO msg="job failed" worker=w6.g7 job=12242 attempt=1 slot=w6.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:01.277898294Z harness: SIGCONT w3.g5
+w3.g5 time=2026-11-11T10:22:01.287Z level=WARN msg="stale result rejected by fencing" worker=w3.g5 job=11450 attempt=1 slot=w3.g5/0 event=stale_commit_rejected
+w3.g5 time=2026-11-11T10:22:02.055Z level=INFO msg="job failed" worker=w3.g5 job=12373 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w0.g4 time=2026-11-11T10:22:02.063Z level=INFO msg="job failed" worker=w0.g4 job=12358 attempt=1 slot=w0.g4/0 event=failed err="simulated training failure"
+w2.g4 time=2026-11-11T10:22:02.342Z level=INFO msg=reaped worker=w2.g4 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:02.476072262Z harness: kill -9 w5.g5 (pid 521)
+w5.g6 time=2026-11-11T10:22:02.487Z level=INFO msg="worker started" worker=w5.g6 concurrency=1 lease=5s heartbeat=1s
+w1.g6 time=2026-11-11T10:22:03.396Z level=INFO msg="job failed" worker=w1.g6 job=12522 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w6.g7 time=2026-11-11T10:22:03.614Z level=INFO msg="job failed" worker=w6.g7 job=12568 attempt=1 slot=w6.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:03.995286356Z harness: SIGSTOP w0.g4 (holds job 12619) for 8s
+w5.g6 time=2026-11-11T10:22:04.493Z level=INFO msg=reaped worker=w5.g6 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:05.177351689Z harness: kill -9 w4.g11 (pid 485)
+w4.g12 time=2026-11-11T10:22:05.189Z level=INFO msg="worker started" worker=w4.g12 concurrency=1 lease=5s heartbeat=1s
+w2.g4 time=2026-11-11T10:22:05.342Z level=INFO msg=reaped worker=w2.g4 event=reaped requeued=1 failed=0
+w1.g6 time=2026-11-11T10:22:05.474Z level=INFO msg="job failed" worker=w1.g6 job=12740 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w4.g12 time=2026-11-11T10:22:06.535Z level=INFO msg="job failed" worker=w4.g12 job=12873 attempt=1 slot=w4.g12/0 event=failed err="simulated training failure"
+w4.g12 time=2026-11-11T10:22:07.058Z level=INFO msg="job failed" worker=w4.g12 job=12917 attempt=1 slot=w4.g12/0 event=failed err="simulated training failure"
+w1.g6 time=2026-11-11T10:22:07.435Z level=INFO msg="job failed" worker=w1.g6 job=12973 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w5.g6 time=2026-11-11T10:22:07.490Z level=INFO msg=reaped worker=w5.g6 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:08.073734946Z harness: SIGCONT w7.g11
+w7.g11 time=2026-11-11T10:22:08.075Z level=WARN msg="stale result rejected by fencing" worker=w7.g11 job=12141 attempt=1 slot=w7.g11/0 event=stale_commit_rejected
+harness 2026-11-11T10:22:08.107389936Z harness: kill -9 w6.g7 (pid 555)
+w6.g8 time=2026-11-11T10:22:08.117Z level=INFO msg="worker started" worker=w6.g8 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:08.384536301Z client load finished after 1m59.656s; waiting for drain
+w3.g5 time=2026-11-11T10:22:08.464Z level=INFO msg="job failed" worker=w3.g5 job=13079 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w2.g4 time=2026-11-11T10:22:08.521Z level=INFO msg="job failed" worker=w2.g4 job=13091 attempt=1 slot=w2.g4/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:08.774358041Z t=120s posts=19262 kills=56 pauses=25 jumps=0  queued=2683 running=10 succeeded=6182 failed=133 cancelled=992
+w4.g12 time=2026-11-11T10:22:08.977Z level=INFO msg="job failed" worker=w4.g12 job=13128 attempt=1 slot=w4.g12/0 event=failed err="simulated training failure"
+w6.g8 time=2026-11-11T10:22:09.123Z level=INFO msg=reaped worker=w6.g8 event=reaped requeued=1 failed=0
+w7.g11 time=2026-11-11T10:22:09.264Z level=INFO msg="job failed" worker=w7.g11 job=13166 attempt=1 slot=w7.g11/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:09.844664362Z harness: kill -9 w5.g6 (pid 567)
+w5.g7 time=2026-11-11T10:22:09.855Z level=INFO msg="worker started" worker=w5.g7 concurrency=1 lease=5s heartbeat=1s
+w7.g11 time=2026-11-11T10:22:09.897Z level=INFO msg="job failed" worker=w7.g11 job=13248 attempt=1 slot=w7.g11/0 event=failed err="simulated training failure"
+w4.g12 time=2026-11-11T10:22:10.194Z level=INFO msg=reaped worker=w4.g12 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:10.665482916Z harness: SIGSTOP w5.g7 (holds job 13341) for 8s
+w3.g5 time=2026-11-11T10:22:11.577Z level=INFO msg="job failed" worker=w3.g5 job=13438 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w1.g6 time=2026-11-11T10:22:11.718Z level=INFO msg="job failed" worker=w1.g6 job=13461 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w7.g11 time=2026-11-11T10:22:11.905Z level=INFO msg="job failed" worker=w7.g11 job=13473 attempt=1 slot=w7.g11/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:11.996137769Z harness: SIGCONT w0.g4
+w0.g4 time=2026-11-11T10:22:11.997Z level=WARN msg="stale result rejected by fencing" worker=w0.g4 job=12619 attempt=1 slot=w0.g4/0 event=stale_commit_rejected
+harness 2026-11-11T10:22:12.761519949Z harness: kill -9 w6.g8 (pid 585)
+w6.g9 time=2026-11-11T10:22:12.773Z level=INFO msg="worker started" worker=w6.g9 concurrency=1 lease=5s heartbeat=1s
+w4.g12 time=2026-11-11T10:22:13.194Z level=INFO msg=reaped worker=w4.g12 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:14.749494146Z harness: kill -9 w4.g12 (pid 577)
+w4.g13 time=2026-11-11T10:22:14.763Z level=INFO msg="worker started" worker=w4.g13 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:14.776Z level=INFO msg=reaped worker=w6.g9 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:15.290125154Z harness: SIGSTOP w4.g13 (holds job 13882) for 8s
+w1.g6 time=2026-11-11T10:22:15.721Z level=INFO msg=reaped worker=w1.g6 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:15.756254689Z harness: kill -9 w7.g11 (pid 537)
+w7.g12 time=2026-11-11T10:22:15.769Z level=INFO msg="worker started" worker=w7.g12 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:15.870Z level=INFO msg="job failed" worker=w6.g9 job=13949 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:17.000268316Z harness: kill -9 w2.g4 (pid 546)
+w2.g5 time=2026-11-11T10:22:17.011Z level=INFO msg="worker started" worker=w2.g5 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:17.777Z level=INFO msg=reaped worker=w6.g9 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:18.665625191Z harness: SIGCONT w5.g7
+w5.g7 time=2026-11-11T10:22:18.674Z level=WARN msg="stale result rejected by fencing" worker=w5.g7 job=13341 attempt=1 slot=w5.g7/0 event=stale_commit_rejected
+harness 2026-11-11T10:22:18.778622045Z t=130s posts=19262 kills=61 pauses=27 jumps=0  queued=2135 running=11 succeeded=6722 failed=140 cancelled=992
+harness 2026-11-11T10:22:18.990783579Z harness: kill -9 w0.g4 (pid 424)
+w0.g5 time=2026-11-11T10:22:19.003Z level=INFO msg="worker started" worker=w0.g5 concurrency=1 lease=5s heartbeat=1s
+w1.g6 time=2026-11-11T10:22:19.072Z level=INFO msg="job failed" worker=w1.g6 job=14322 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w5.g7 time=2026-11-11T10:22:19.180Z level=INFO msg="job failed" worker=w5.g7 job=14340 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:19.529801554Z harness: SIGSTOP w0.g5 (holds job 14378) for 8s
+w7.g12 time=2026-11-11T10:22:19.775Z level=INFO msg=reaped worker=w7.g12 event=reaped requeued=1 failed=0
+w7.g12 time=2026-11-11T10:22:19.785Z level=INFO msg="job failed" worker=w7.g12 job=14400 attempt=1 slot=w7.g12/0 event=failed err="simulated training failure"
+w7.g12 time=2026-11-11T10:22:20.237Z level=INFO msg="job failed" worker=w7.g12 job=14448 attempt=1 slot=w7.g12/0 event=failed err="simulated training failure"
+w3.g5 time=2026-11-11T10:22:20.377Z level=INFO msg=reaped worker=w3.g5 event=reaped requeued=1 failed=0
+w1.g6 time=2026-11-11T10:22:20.722Z level=INFO msg=reaped worker=w1.g6 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:21.346683424Z harness: kill -9 w7.g12 (pid 617)
+w1.g6 time=2026-11-11T10:22:21.352Z level=INFO msg="job failed" worker=w1.g6 job=14565 attempt=1 slot=w1.g6/0 event=failed err="simulated training failure"
+w7.g13 time=2026-11-11T10:22:21.359Z level=INFO msg="worker started" worker=w7.g13 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:21.774Z level=INFO msg="job failed" worker=w6.g9 job=14601 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+w2.g5 time=2026-11-11T10:22:22.014Z level=INFO msg=reaped worker=w2.g5 event=reaped requeued=1 failed=0
+w5.g7 time=2026-11-11T10:22:22.276Z level=INFO msg="job failed" worker=w5.g7 job=14655 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+w2.g5 time=2026-11-11T10:22:23.135Z level=INFO msg="job failed" worker=w2.g5 job=14757 attempt=1 slot=w2.g5/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:23.291263129Z harness: SIGCONT w4.g13
+w4.g13 time=2026-11-11T10:22:23.301Z level=WARN msg="stale result rejected by fencing" worker=w4.g13 job=13882 attempt=1 slot=w4.g13/0 event=stale_commit_rejected
+w3.g5 time=2026-11-11T10:22:23.477Z level=INFO msg="job failed" worker=w3.g5 job=14789 attempt=1 slot=w3.g5/0 event=failed err="simulated training failure"
+w2.g5 time=2026-11-11T10:22:24.014Z level=INFO msg=reaped worker=w2.g5 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:24.020349944Z harness: kill -9 w3.g5 (pid 450)
+w3.g6 time=2026-11-11T10:22:24.033Z level=INFO msg="worker started" worker=w3.g6 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:24.141446215Z harness: SIGSTOP w5.g7 (holds job 14878) for 8s
+w1.g6 time=2026-11-11T10:22:24.720Z level=INFO msg=reaped worker=w1.g6 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:25.793790336Z harness: kill -9 w1.g6 (pid 512)
+w1.g7 time=2026-11-11T10:22:25.805Z level=INFO msg="worker started" worker=w1.g7 concurrency=1 lease=5s heartbeat=1s
+w7.g13 time=2026-11-11T10:22:26.361Z level=INFO msg=reaped worker=w7.g13 event=reaped requeued=1 failed=0
+w7.g13 time=2026-11-11T10:22:26.659Z level=INFO msg="job failed" worker=w7.g13 job=15139 attempt=1 slot=w7.g13/0 event=failed err="simulated training failure"
+w6.g9 time=2026-11-11T10:22:27.456Z level=INFO msg="job failed" worker=w6.g9 job=15246 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+w1.g7 time=2026-11-11T10:22:27.504Z level=INFO msg="job failed" worker=w1.g7 job=15239 attempt=1 slot=w1.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:27.530527567Z harness: SIGCONT w0.g5
+w0.g5 time=2026-11-11T10:22:27.539Z level=WARN msg="stale result rejected by fencing" worker=w0.g5 job=14378 attempt=1 slot=w0.g5/0 event=stale_commit_rejected
+harness 2026-11-11T10:22:28.109354222Z harness: kill -9 w2.g5 (pid 625)
+w2.g6 time=2026-11-11T10:22:28.121Z level=INFO msg="worker started" worker=w2.g6 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:28.698Z level=INFO msg="job failed" worker=w6.g9 job=15404 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:28.782730772Z t=140s posts=19262 kills=66 pauses=29 jumps=0  queued=1617 running=11 succeeded=7227 failed=153 cancelled=992
+w0.g5 time=2026-11-11T10:22:29.007Z level=INFO msg=reaped worker=w0.g5 event=reaped requeued=1 failed=0
+w7.g13 time=2026-11-11T10:22:29.363Z level=INFO msg=reaped worker=w7.g13 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:30.140828137Z harness: SIGSTOP w7.g13 (holds job 15576) for 8s
+w6.g9 time=2026-11-11T10:22:30.278Z level=INFO msg="job failed" worker=w6.g9 job=15574 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:30.492101621Z harness: kill -9 w2.g6 (pid 674)
+w2.g7 time=2026-11-11T10:22:30.505Z level=INFO msg="worker started" worker=w2.g7 concurrency=1 lease=5s heartbeat=1s
+w6.g9 time=2026-11-11T10:22:30.508Z level=INFO msg="job failed" worker=w6.g9 job=15618 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+w1.g7 time=2026-11-11T10:22:30.809Z level=INFO msg=reaped worker=w1.g7 event=reaped requeued=1 failed=0
+w6.g9 time=2026-11-11T10:22:31.019Z level=INFO msg="job failed" worker=w6.g9 job=15664 attempt=1 slot=w6.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:32.141828732Z harness: SIGCONT w5.g7
+w5.g7 time=2026-11-11T10:22:32.142Z level=WARN msg="stale result rejected by fencing" worker=w5.g7 job=14878 attempt=1 slot=w5.g7/0 event=stale_commit_rejected
+harness 2026-11-11T10:22:32.323954971Z harness: kill -9 w6.g9 (pid 601)
+w6.g10 time=2026-11-11T10:22:32.336Z level=INFO msg="worker started" worker=w6.g10 concurrency=1 lease=5s heartbeat=1s
+w6.g10 time=2026-11-11T10:22:32.647Z level=INFO msg="job failed" worker=w6.g10 job=15849 attempt=1 slot=w6.g10/0 event=failed err="simulated training failure"
+w5.g7 time=2026-11-11T10:22:32.743Z level=INFO msg="job failed" worker=w5.g7 job=15864 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+w0.g5 time=2026-11-11T10:22:33.010Z level=INFO msg=reaped worker=w0.g5 event=reaped requeued=1 failed=0
+w5.g7 time=2026-11-11T10:22:33.826Z level=INFO msg="job failed" worker=w5.g7 job=15990 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:34.653286389Z harness: kill -9 w1.g7 (pid 663)
+w1.g8 time=2026-11-11T10:22:34.665Z level=INFO msg="worker started" worker=w1.g8 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:35.336750681Z harness: SIGSTOP w1.g8 (holds job 16163) for 8s
+w6.g10 time=2026-11-11T10:22:35.341Z level=INFO msg=reaped worker=w6.g10 event=reaped requeued=1 failed=0
+w2.g7 time=2026-11-11T10:22:35.510Z level=INFO msg=reaped worker=w2.g7 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:36.911261914Z harness: kill -9 w4.g13 (pid 609)
+w4.g14 time=2026-11-11T10:22:36.926Z level=INFO msg="worker started" worker=w4.g14 concurrency=1 lease=5s heartbeat=1s
+w6.g10 time=2026-11-11T10:22:37.341Z level=INFO msg=reaped worker=w6.g10 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:38.142028529Z harness: SIGCONT w7.g13
+w7.g13 time=2026-11-11T10:22:38.143Z level=WARN msg="stale result rejected by fencing" worker=w7.g13 job=15576 attempt=1 slot=w7.g13/0 event=stale_commit_rejected
+w4.g14 time=2026-11-11T10:22:38.299Z level=INFO msg="job failed" worker=w4.g14 job=16485 attempt=1 slot=w4.g14/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:38.395941906Z harness: SIGSTOP w0.g5 (holds job 16502) for 8s
+harness 2026-11-11T10:22:38.787285513Z t=150s posts=19262 kills=70 pauses=32 jumps=0  queued=1082 running=9 succeeded=7757 failed=160 cancelled=992
+harness 2026-11-11T10:22:39.123678432Z harness: kill -9 w3.g6 (pid 655)
+w3.g7 time=2026-11-11T10:22:39.137Z level=INFO msg="worker started" worker=w3.g7 concurrency=1 lease=5s heartbeat=1s
+w5.g7 time=2026-11-11T10:22:39.859Z level=INFO msg=reaped worker=w5.g7 event=reaped requeued=1 failed=0
+w6.g10 time=2026-11-11T10:22:40.340Z level=INFO msg=reaped worker=w6.g10 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:40.488599356Z harness: kill -9 w6.g10 (pid 691)
+w6.g11 time=2026-11-11T10:22:40.501Z level=INFO msg="worker started" worker=w6.g11 concurrency=1 lease=5s heartbeat=1s
+w5.g7 time=2026-11-11T10:22:40.770Z level=INFO msg="job failed" worker=w5.g7 job=16744 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:41.151781011Z harness: SIGSTOP w6.g11 (holds job 16803) for 8s
+w3.g7 time=2026-11-11T10:22:41.203Z level=INFO msg="job failed" worker=w3.g7 job=16785 attempt=1 slot=w3.g7/0 event=failed err="simulated training failure"
+w4.g14 time=2026-11-11T10:22:41.931Z level=INFO msg=reaped worker=w4.g14 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:43.188449272Z harness: kill -9 w2.g7 (pid 683)
+w2.g8 time=2026-11-11T10:22:43.201Z level=INFO msg="worker started" worker=w2.g8 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:43.337931258Z harness: SIGCONT w1.g8
+w1.g8 time=2026-11-11T10:22:43.339Z level=WARN msg="stale result rejected by fencing" worker=w1.g8 job=16163 attempt=1 slot=w1.g8/0 event=stale_commit_rejected
+w7.g13 time=2026-11-11T10:22:43.363Z level=INFO msg=reaped worker=w7.g13 event=reaped requeued=1 failed=0
+w3.g7 time=2026-11-11T10:22:44.140Z level=INFO msg=reaped worker=w3.g7 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:44.648210569Z harness: SIGSTOP w3.g7 (holds job 17127) for 8s
+w5.g7 time=2026-11-11T10:22:44.885Z level=INFO msg="job failed" worker=w5.g7 job=17168 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+w2.g8 time=2026-11-11T10:22:45.051Z level=INFO msg="job failed" worker=w2.g8 job=17185 attempt=1 slot=w2.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:45.23256795Z harness: kill -9 w4.g14 (pid 708)
+w4.g15 time=2026-11-11T10:22:45.245Z level=INFO msg="worker started" worker=w4.g15 concurrency=1 lease=5s heartbeat=1s
+w1.g8 time=2026-11-11T10:22:45.669Z level=INFO msg=reaped worker=w1.g8 event=reaped requeued=1 failed=0
+w4.g15 time=2026-11-11T10:22:45.856Z level=INFO msg="job failed" worker=w4.g15 job=17249 attempt=1 slot=w4.g15/0 event=failed err="simulated training failure"
+w2.g8 time=2026-11-11T10:22:46.205Z level=INFO msg=reaped worker=w2.g8 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:46.39669762Z harness: SIGCONT w0.g5
+w0.g5 time=2026-11-11T10:22:46.398Z level=WARN msg="stale result rejected by fencing" worker=w0.g5 job=16502 attempt=1 slot=w0.g5/0 event=stale_commit_rejected
+w5.g7 time=2026-11-11T10:22:46.839Z level=INFO msg="job failed" worker=w5.g7 job=17337 attempt=1 slot=w5.g7/0 event=failed err="simulated training failure"
+w1.g8 time=2026-11-11T10:22:47.335Z level=INFO msg="job failed" worker=w1.g8 job=17403 attempt=1 slot=w1.g8/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:47.345519054Z harness: kill -9 w0.g5 (pid 634)
+w0.g6 time=2026-11-11T10:22:47.358Z level=INFO msg="worker started" worker=w0.g6 concurrency=1 lease=5s heartbeat=1s
+w2.g8 time=2026-11-11T10:22:47.955Z level=INFO msg="job failed" worker=w2.g8 job=17465 attempt=1 slot=w2.g8/0 event=failed err="simulated training failure"
+w2.g8 time=2026-11-11T10:22:48.206Z level=INFO msg=reaped worker=w2.g8 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:48.510456468Z harness: kill -9 w1.g8 (pid 700)
+w1.g9 time=2026-11-11T10:22:48.523Z level=INFO msg="worker started" worker=w1.g9 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:48.674307728Z harness: SIGSTOP w2.g8 (holds job 17540) for 8s
+harness 2026-11-11T10:22:48.790985074Z t=160s posts=19262 kills=76 pauses=35 jumps=0  queued=619 running=9 succeeded=8212 failed=168 cancelled=992
+harness 2026-11-11T10:22:49.152919224Z harness: SIGCONT w6.g11
+w6.g11 time=2026-11-11T10:22:49.162Z level=WARN msg="stale result rejected by fencing" worker=w6.g11 job=16803 attempt=1 slot=w6.g11/0 event=stale_commit_rejected
+w6.g11 time=2026-11-11T10:22:49.506Z level=INFO msg=reaped worker=w6.g11 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:49.783575092Z harness: kill -9 w6.g11 (pid 726)
+w6.g12 time=2026-11-11T10:22:49.795Z level=INFO msg="worker started" worker=w6.g12 concurrency=1 lease=5s heartbeat=1s
+w4.g15 time=2026-11-11T10:22:50.251Z level=INFO msg=reaped worker=w4.g15 event=reaped requeued=1 failed=0
+w7.g13 time=2026-11-11T10:22:50.535Z level=INFO msg="job failed" worker=w7.g13 job=17702 attempt=1 slot=w7.g13/0 event=failed err="simulated training failure"
+w4.g15 time=2026-11-11T10:22:51.219Z level=INFO msg="job failed" worker=w4.g15 job=17766 attempt=1 slot=w4.g15/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:51.271709433Z harness: kill -9 w5.g7 (pid 593)
+w5.g8 time=2026-11-11T10:22:51.285Z level=INFO msg="worker started" worker=w5.g8 concurrency=1 lease=5s heartbeat=1s
+w1.g9 time=2026-11-11T10:22:51.680Z level=INFO msg="job failed" worker=w1.g9 job=17818 attempt=1 slot=w1.g9/0 event=failed err="simulated training failure"
+w5.g8 time=2026-11-11T10:22:52.289Z level=INFO msg=reaped worker=w5.g8 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:52.648580091Z harness: SIGCONT w3.g7
+w3.g7 time=2026-11-11T10:22:52.657Z level=WARN msg="stale result rejected by fencing" worker=w3.g7 job=17127 attempt=1 slot=w3.g7/0 event=stale_commit_rejected
+w0.g6 time=2026-11-11T10:22:52.826Z level=INFO msg="job failed" worker=w0.g6 job=17943 attempt=1 slot=w0.g6/0 event=failed err="simulated training failure"
+w1.g9 time=2026-11-11T10:22:53.528Z level=INFO msg=reaped worker=w1.g9 event=reaped requeued=1 failed=0
+w0.g6 time=2026-11-11T10:22:54.154Z level=INFO msg="job failed" worker=w0.g6 job=18121 attempt=1 slot=w0.g6/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:54.260051757Z harness: kill -9 w5.g8 (pid 778)
+w5.g9 time=2026-11-11T10:22:54.271Z level=INFO msg="worker started" worker=w5.g9 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:54.655858446Z harness: SIGSTOP w7.g13 (holds job 18186) for 8s
+w6.g12 time=2026-11-11T10:22:54.800Z level=INFO msg=reaped worker=w6.g12 event=reaped requeued=1 failed=0
+w6.g12 time=2026-11-11T10:22:56.002Z level=INFO msg="job failed" worker=w6.g12 job=18352 attempt=1 slot=w6.g12/0 event=failed err="simulated training failure"
+w0.g6 time=2026-11-11T10:22:56.005Z level=INFO msg="job failed" worker=w0.g6 job=18353 attempt=1 slot=w0.g6/0 event=failed err="simulated training failure"
+w4.g15 time=2026-11-11T10:22:56.249Z level=INFO msg=reaped worker=w4.g15 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:22:56.656849888Z harness: kill -9 w6.g12 (pid 770)
+w6.g13 time=2026-11-11T10:22:56.670Z level=INFO msg="worker started" worker=w6.g13 concurrency=1 lease=5s heartbeat=1s
+harness 2026-11-11T10:22:56.674450678Z harness: SIGCONT w2.g8
+w2.g8 time=2026-11-11T10:22:56.945Z level=INFO msg="job failed" worker=w2.g8 job=18442 attempt=1 slot=w2.g8/0 event=failed err="simulated training failure"
+w5.g9 time=2026-11-11T10:22:57.067Z level=INFO msg="job failed" worker=w5.g9 job=18446 attempt=1 slot=w5.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:57.918029593Z harness: kill -9 w4.g15 (pid 743)
+w4.g16 time=2026-11-11T10:22:57.930Z level=INFO msg="worker started" worker=w4.g16 concurrency=1 lease=5s heartbeat=1s
+w1.g9 time=2026-11-11T10:22:58.787Z level=INFO msg="job failed" worker=w1.g9 job=18664 attempt=1 slot=w1.g9/0 event=failed err="simulated training failure"
+harness 2026-11-11T10:22:58.79501378Z t=170s posts=19262 kills=81 pauses=36 jumps=0  queued=113 running=11 succeeded=8706 failed=178 cancelled=992
+w2.g8 time=2026-11-11T10:22:58.938Z level=INFO msg="job failed" worker=w2.g8 job=18688 attempt=1 slot=w2.g8/0 event=failed err="simulated training failure"
+w2.g8 time=2026-11-11T10:22:59.207Z level=INFO msg=reaped worker=w2.g8 event=reaped requeued=1 failed=0
+w6.g13 time=2026-11-11T10:22:59.675Z level=INFO msg=reaped worker=w6.g13 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:23:00.525105595Z harness: kill -9 w4.g16 (pid 805)
+w4.g17 time=2026-11-11T10:23:00.539Z level=INFO msg="worker started" worker=w4.g17 concurrency=1 lease=5s heartbeat=1s
+w6.g13 time=2026-11-11T10:23:01.714Z level=INFO msg=reaped worker=w6.g13 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:23:02.656234178Z harness: SIGCONT w7.g13
+w7.g13 time=2026-11-11T10:23:02.665Z level=WARN msg="stale result rejected by fencing" worker=w7.g13 job=18186 attempt=1 slot=w7.g13/0 event=stale_commit_rejected
+harness 2026-11-11T10:23:03.134507884Z harness: kill -9 w6.g13 (pid 795)
+w6.g14 time=2026-11-11T10:23:03.144Z level=INFO msg="worker started" worker=w6.g14 concurrency=1 lease=5s heartbeat=1s
+w3.g7 time=2026-11-11T10:23:03.148Z level=INFO msg=reaped worker=w3.g7 event=reaped requeued=1 failed=0
+harness 2026-11-11T10:23:05.280132022Z harness: kill -9 w2.g8 (pid 734)
+w2.g9 time=2026-11-11T10:23:05.291Z level=INFO msg="worker started" worker=w2.g9 concurrency=1 lease=5s heartbeat=1s
+w1.g9 time=2026-11-11T10:23:05.528Z level=INFO msg=reaped worker=w1.g9 event=reaped requeued=1 failed=0
+w0.g6 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w0.g6
+w3.g7 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w3.g7
+w6.g14 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w6.g14
+w2.g9 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w2.g9
+w4.g17 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w4.g17
+w5.g9 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w5.g9
+w7.g13 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w7.g13
+w1.g9 time=2026-11-11T10:23:16.768Z level=INFO msg="worker stopped" worker=w1.g9

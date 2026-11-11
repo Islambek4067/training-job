@@ -1,0 +1,60 @@
+=== RUN   TestNoDoubleClaim
+=== RUN   TestNoDoubleClaim/read_committed
+=== RUN   TestNoDoubleClaim/repeatable_read
+=== RUN   TestNoDoubleClaim/serializable
+    silent_test.go:165: 6 claims gave up after 20 serialization retries (worker would retry)
+--- PASS: TestNoDoubleClaim (10.01s)
+    --- PASS: TestNoDoubleClaim/read_committed (2.65s)
+    --- PASS: TestNoDoubleClaim/repeatable_read (2.59s)
+    --- PASS: TestNoDoubleClaim/serializable (4.76s)
+=== RUN   TestNoDoubleClaim_DetectorWorks
+    silent_test.go:209: without FOR UPDATE SKIP LOCKED: 298 jobs were claimed more than once
+--- PASS: TestNoDoubleClaim_DetectorWorks (2.11s)
+=== RUN   TestZombieCannotWriteStaleResult
+=== RUN   TestZombieCannotWriteStaleResult/read_committed
+=== RUN   TestZombieCannotWriteStaleResult/repeatable_read
+=== RUN   TestZombieCannotWriteStaleResult/serializable
+--- PASS: TestZombieCannotWriteStaleResult (0.35s)
+    --- PASS: TestZombieCannotWriteStaleResult/read_committed (0.12s)
+    --- PASS: TestZombieCannotWriteStaleResult/repeatable_read (0.12s)
+    --- PASS: TestZombieCannotWriteStaleResult/serializable (0.12s)
+=== RUN   TestExpiredButNotReclaimedOwnerMayCommit
+--- PASS: TestExpiredButNotReclaimedOwnerMayCommit (0.10s)
+=== RUN   TestCancelCompleteRace
+=== RUN   TestCancelCompleteRace/read_committed
+    silent_test.go:314: outcomes over 300 races: map[cancelled:242 succeeded:58]
+=== RUN   TestCancelCompleteRace/repeatable_read
+    silent_test.go:314: outcomes over 300 races: map[cancelled:265 succeeded:35]
+=== RUN   TestCancelCompleteRace/serializable
+    silent_test.go:314: outcomes over 300 races: map[cancelled:260 succeeded:40]
+--- PASS: TestCancelCompleteRace (9.80s)
+    --- PASS: TestCancelCompleteRace/read_committed (3.25s)
+    --- PASS: TestCancelCompleteRace/repeatable_read (3.24s)
+    --- PASS: TestCancelCompleteRace/serializable (3.31s)
+=== RUN   TestCancelCompleteInterleavings
+=== RUN   TestCancelCompleteInterleavings/read_committed
+=== RUN   TestCancelCompleteInterleavings/repeatable_read
+=== RUN   TestCancelCompleteInterleavings/serializable
+--- PASS: TestCancelCompleteInterleavings (2.00s)
+    --- PASS: TestCancelCompleteInterleavings/read_committed (0.62s)
+    --- PASS: TestCancelCompleteInterleavings/repeatable_read (0.70s)
+    --- PASS: TestCancelCompleteInterleavings/serializable (0.68s)
+=== RUN   TestIdempotentCreateUnderConcurrency
+=== RUN   TestIdempotentCreateUnderConcurrency/read_committed
+=== RUN   TestIdempotentCreateUnderConcurrency/repeatable_read
+=== RUN   TestIdempotentCreateUnderConcurrency/serializable
+--- PASS: TestIdempotentCreateUnderConcurrency (4.54s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/read_committed (1.38s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/repeatable_read (1.57s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/serializable (1.59s)
+=== RUN   TestFrozenTransactionHoldsRowLock
+=== RUN   TestFrozenTransactionHoldsRowLock/without_timeout
+    silent_test.go:450: confirmed: a frozen open transaction blocks cancel and is invisible to the reaper
+=== RUN   TestFrozenTransactionHoldsRowLock/with_timeout
+--- PASS: TestFrozenTransactionHoldsRowLock (3.08s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/without_timeout (1.42s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/with_timeout (1.67s)
+=== RUN   TestLeaseUsesOnlyDatabaseClock
+--- PASS: TestLeaseUsesOnlyDatabaseClock (0.18s)
+PASS
+ok  	soupq/internal/store	32.180s

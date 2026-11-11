@@ -1,0 +1,45 @@
+ Container soup_task-db-1  Running
+ Container soup_task-migrate-1  Recreate
+ Container soup_task-migrate-1  Recreated
+ Container soup_task-api-1  Recreate
+ Container soup_task-api-1  Recreated
+ Container soup_task-db-1  Waiting
+ Container soup_task-db-1  Healthy
+ Container soup_task-migrate-1  Starting
+ Container soup_task-migrate-1  Started
+ Container soup_task-migrate-1  Waiting
+ Container soup_task-migrate-1  Exited
+ Container soup_task-api-1  Starting
+ Container soup_task-api-1  Started
+run 20261111T105337Z seed=1794394417031849394 jobs=10000 workers=8 rate=100/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 isolation="repeatable read"
+t= 10s posts=1691 kills=5 pauses=2 jumps=0  queued=332 running=11 succeeded=579 failed=14 cancelled=63
+t= 20s posts=3551 kills=10 pauses=4 jumps=0  queued=721 running=10 succeeded=1062 failed=28 cancelled=178
+t= 30s posts=5486 kills=15 pauses=5 jumps=0  queued=1096 running=9 succeeded=1577 failed=38 cancelled=279
+t= 40s posts=7365 kills=20 pauses=8 jumps=0  queued=1484 running=9 succeeded=2073 failed=46 cancelled=388
+t= 50s posts=9341 kills=24 pauses=9 jumps=0  queued=1849 running=7 succeeded=2605 failed=54 cancelled=485
+t= 60s posts=11244 kills=29 pauses=11 jumps=0  queued=2274 running=9 succeeded=3081 failed=60 cancelled=576
+t= 70s posts=13182 kills=34 pauses=13 jumps=0  queued=2684 running=9 succeeded=3575 failed=65 cancelled=668
+t= 80s posts=15097 kills=38 pauses=15 jumps=0  queued=3075 running=10 succeeded=4075 failed=75 cancelled=766
+t= 90s posts=17039 kills=43 pauses=17 jumps=0  queued=3475 running=10 succeeded=4560 failed=88 cancelled=868
+t=100s posts=19020 kills=49 pauses=19 jumps=0  queued=3843 running=10 succeeded=5091 failed=96 cancelled=960
+t=110s posts=19248 kills=53 pauses=21 jumps=0  queued=3303 running=8 succeeded=5612 failed=107 cancelled=970
+client load finished after 1m59.343s; waiting for drain
+t=120s posts=19324 kills=58 pauses=22 jumps=0  queued=2759 running=11 succeeded=6146 failed=114 cancelled=970
+t=130s posts=19324 kills=63 pauses=25 jumps=0  queued=2229 running=10 succeeded=6668 failed=123 cancelled=970
+t=140s posts=19324 kills=68 pauses=26 jumps=0  queued=1699 running=11 succeeded=7190 failed=130 cancelled=970
+t=150s posts=19324 kills=73 pauses=28 jumps=0  queued=1142 running=10 succeeded=7731 failed=147 cancelled=970
+t=160s posts=19324 kills=77 pauses=30 jumps=0  queued=632 running=9 succeeded=8231 failed=158 cancelled=970
+t=170s posts=19324 kills=83 pauses=32 jumps=0  queued=133 running=8 succeeded=8717 failed=172 cancelled=970
+==================== CHAOS RUN 20261111T105337Z ====================
+seed=1794394417031849394 elapsed=3m8.178s jobs=10000 workers=8 isolation="repeatable read"
+chaos: kill -9=86  SIGSTOP(8s)=33  clock-jumps=0  respawns=86
+client: POSTs=19324 (duplicate/replayed=9214, retries=0, transport/5xx errors=0)  mismatch-409=110
+client: cancels 200=1164 409=27 other=0
+client: POST latency p50=4.363ms p99=15.887ms max=287.011ms
+db: jobs=10000  succeeded=8856 failed=174 (lease-exhausted=0) cancelled=970 queued=0 running=0
+db: executions (job_runs)=9139  committed effects=8856
+db: runs per job histogram: 0=967 1=8929 2=102 3=2 4=0 5+=0
+worker events: failed=174 reaped=108 stale_commit_rejected=35
+coverage: zombie/cancelled owners stopped by fencing=35 (stale commits rejected=35), re-executed jobs=106
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS

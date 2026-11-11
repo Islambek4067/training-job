@@ -1,0 +1,4 @@
+FENCING: job 601 effect written by attempt 1, final attempt 2
+FENCING: job 2679 effect written by attempt 2, final attempt 3
+FENCING: job 1248 effect written by attempt 2, final attempt 3
+FENCING: job 1847 effect written by attempt 3, final attempt 4

@@ -1,0 +1,17 @@
+=== mutation no-row-lock-on-claim: 'ORDER BY id LIMIT 1 FOR UPDATE SKIP LOCKED' -> 'ORDER BY id LIMIT 1'
+=== RUN   TestNoDoubleClaim
+=== RUN   TestNoDoubleClaim/read_committed
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 3.987s, false 'queue empty' answers=4297
+=== RUN   TestNoDoubleClaim/repeatable_read
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 2.095s, false 'queue empty' answers=0
+    silent_test.go:177: 28 claims gave up after 20 serialization retries (worker would retry)
+=== RUN   TestNoDoubleClaim/serializable
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 1.98s, false 'queue empty' answers=0
+    silent_test.go:177: 25 claims gave up after 20 serialization retries (worker would retry)
+--- PASS: TestNoDoubleClaim (14.88s)
+    --- PASS: TestNoDoubleClaim/read_committed (6.37s)
+    --- PASS: TestNoDoubleClaim/repeatable_read (4.50s)
+    --- PASS: TestNoDoubleClaim/serializable (4.01s)
+PASS
+ok  	soupq/internal/store	14.892s
+SURVIVED: tests still pass (a test gap, or an equivalent mutant — see docs/SILENT_FAILURES.md)

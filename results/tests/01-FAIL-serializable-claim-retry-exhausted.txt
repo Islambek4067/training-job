@@ -1,0 +1,78 @@
+=== RUN   TestNoDoubleClaim
+=== RUN   TestNoDoubleClaim/read_committed
+=== RUN   TestNoDoubleClaim/repeatable_read
+=== RUN   TestNoDoubleClaim/serializable
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+    silent_test.go:135: ERROR: could not serialize access due to read/write dependencies among transactions (SQLSTATE 40001)
+--- FAIL: TestNoDoubleClaim (10.07s)
+    --- PASS: TestNoDoubleClaim/read_committed (2.85s)
+    --- PASS: TestNoDoubleClaim/repeatable_read (2.57s)
+    --- FAIL: TestNoDoubleClaim/serializable (4.65s)
+=== RUN   TestNoDoubleClaim_DetectorWorks
+    silent_test.go:197: without FOR UPDATE SKIP LOCKED: 299 jobs were claimed more than once
+--- PASS: TestNoDoubleClaim_DetectorWorks (2.10s)
+=== RUN   TestZombieCannotWriteStaleResult
+=== RUN   TestZombieCannotWriteStaleResult/read_committed
+=== RUN   TestZombieCannotWriteStaleResult/repeatable_read
+=== RUN   TestZombieCannotWriteStaleResult/serializable
+--- PASS: TestZombieCannotWriteStaleResult (0.34s)
+    --- PASS: TestZombieCannotWriteStaleResult/read_committed (0.11s)
+    --- PASS: TestZombieCannotWriteStaleResult/repeatable_read (0.12s)
+    --- PASS: TestZombieCannotWriteStaleResult/serializable (0.12s)
+=== RUN   TestExpiredButNotReclaimedOwnerMayCommit
+--- PASS: TestExpiredButNotReclaimedOwnerMayCommit (0.11s)
+=== RUN   TestCancelCompleteRace
+=== RUN   TestCancelCompleteRace/read_committed
+    silent_test.go:302: outcomes over 300 races: map[cancelled:259 succeeded:41]
+=== RUN   TestCancelCompleteRace/repeatable_read
+    silent_test.go:302: outcomes over 300 races: map[cancelled:259 succeeded:41]
+=== RUN   TestCancelCompleteRace/serializable
+    silent_test.go:302: outcomes over 300 races: map[cancelled:278 succeeded:22]
+--- PASS: TestCancelCompleteRace (12.39s)
+    --- PASS: TestCancelCompleteRace/read_committed (3.33s)
+    --- PASS: TestCancelCompleteRace/repeatable_read (4.58s)
+    --- PASS: TestCancelCompleteRace/serializable (4.48s)
+=== RUN   TestCancelCompleteInterleavings
+=== RUN   TestCancelCompleteInterleavings/read_committed
+=== RUN   TestCancelCompleteInterleavings/repeatable_read
+=== RUN   TestCancelCompleteInterleavings/serializable
+--- PASS: TestCancelCompleteInterleavings (2.25s)
+    --- PASS: TestCancelCompleteInterleavings/read_committed (0.75s)
+    --- PASS: TestCancelCompleteInterleavings/repeatable_read (0.83s)
+    --- PASS: TestCancelCompleteInterleavings/serializable (0.68s)
+=== RUN   TestIdempotentCreateUnderConcurrency
+=== RUN   TestIdempotentCreateUnderConcurrency/read_committed
+=== RUN   TestIdempotentCreateUnderConcurrency/repeatable_read
+=== RUN   TestIdempotentCreateUnderConcurrency/serializable
+--- PASS: TestIdempotentCreateUnderConcurrency (7.02s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/read_committed (1.43s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/repeatable_read (2.80s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/serializable (2.79s)
+=== RUN   TestFrozenTransactionHoldsRowLock
+=== RUN   TestFrozenTransactionHoldsRowLock/without_timeout
+    silent_test.go:438: confirmed: a frozen open transaction blocks cancel and is invisible to the reaper
+=== RUN   TestFrozenTransactionHoldsRowLock/with_timeout
+--- PASS: TestFrozenTransactionHoldsRowLock (3.07s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/without_timeout (1.43s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/with_timeout (1.64s)
+=== RUN   TestLeaseUsesOnlyDatabaseClock
+--- PASS: TestLeaseUsesOnlyDatabaseClock (0.10s)
+FAIL
+FAIL	soupq/internal/store	37.457s
+FAIL

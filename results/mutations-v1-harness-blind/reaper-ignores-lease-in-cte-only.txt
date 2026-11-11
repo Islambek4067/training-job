@@ -1,0 +1,12 @@
+=== mutation reaper-ignores-lease-in-cte-only: 'WHERE status = 'running' AND lease_until < now()' -> 'WHERE status = 'running''
+=== RUN   TestReaperLeavesLiveLeases
+=== RUN   TestReaperLeavesLiveLeases/read_committed
+=== RUN   TestReaperLeavesLiveLeases/repeatable_read
+=== RUN   TestReaperLeavesLiveLeases/serializable
+--- PASS: TestReaperLeavesLiveLeases (0.56s)
+    --- PASS: TestReaperLeavesLiveLeases/read_committed (0.21s)
+    --- PASS: TestReaperLeavesLiveLeases/repeatable_read (0.20s)
+    --- PASS: TestReaperLeavesLiveLeases/serializable (0.15s)
+PASS
+ok  	soupq/internal/store	0.562s
+SURVIVED: tests still pass (a test gap, or an equivalent mutant — see docs/SILENT_FAILURES.md)

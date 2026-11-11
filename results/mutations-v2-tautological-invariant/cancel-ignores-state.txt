@@ -1,0 +1,16 @@
+=== mutation cancel-ignores-state: 'WHERE id = $1 AND status IN ('queued', 'running')' -> 'WHERE id = $1'
+=== RUN   TestCancelCompleteRace
+=== RUN   TestCancelCompleteRace/read_committed
+    silent_test.go:335: job 1 cancelled: completed=true effects=1 cancelErr=<nil>
+=== RUN   TestCancelCompleteRace/repeatable_read
+    silent_test.go:335: job 4 cancelled: completed=true effects=1 cancelErr=<nil>
+=== RUN   TestCancelCompleteRace/serializable
+    silent_test.go:335: job 7 cancelled: completed=true effects=1 cancelErr=<nil>
+--- FAIL: TestCancelCompleteRace (0.55s)
+    --- FAIL: TestCancelCompleteRace/read_committed (0.19s)
+    --- FAIL: TestCancelCompleteRace/repeatable_read (0.16s)
+    --- FAIL: TestCancelCompleteRace/serializable (0.20s)
+FAIL
+FAIL	soupq/internal/store	0.553s
+FAIL
+KILLED: tests fail with the mutation (good)

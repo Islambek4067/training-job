@@ -1,0 +1,32 @@
+=== mutation reaper-ignores-lease: 'WHERE status = 'running' AND lease_until < now()|||AND j.status = 'running' AND j.lease_until < now()' -> 'WHERE status = 'running'|||AND j.status = 'running''
+=== RUN   TestReaperLeavesLiveLeases
+=== RUN   TestReaperLeavesLiveLeases/read_committed
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+=== RUN   TestReaperLeavesLiveLeases/repeatable_read
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+=== RUN   TestReaperLeavesLiveLeases/serializable
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+--- FAIL: TestReaperLeavesLiveLeases (0.52s)
+    --- FAIL: TestReaperLeavesLiveLeases/read_committed (0.21s)
+    --- FAIL: TestReaperLeavesLiveLeases/repeatable_read (0.15s)
+    --- FAIL: TestReaperLeavesLiveLeases/serializable (0.16s)
+FAIL
+FAIL	soupq/internal/store	0.525s
+FAIL
+KILLED: tests fail with the mutation (good)
+=== chaos with mutant workers (reaper-ignores-lease)
+run 20261111T110621Z seed=1794395181265321849 jobs=2000 workers=8 rate=200/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 isolation=""
+client load finished after 29.261s; waiting for drain
+==================== CHAOS RUN 20261111T110621Z ====================
+seed=1794395181265321849 elapsed=1m24.903s jobs=2000 workers=8 isolation=""
+chaos: kill -9=38  SIGSTOP(8s)=12  clock-jumps=0  respawns=38
+client: POSTs=3689 (duplicate/replayed=1671, retries=0, transport/5xx errors=0)  mismatch-409=18
+client: cancels 200=216 409=8 other=0
+client: POST latency p50=1.955ms p99=9.137ms max=34.9ms
+db: jobs=2000  succeeded=1682 failed=138 (lease-exhausted=107) cancelled=180 queued=0 running=0
+db: executions (job_runs)=3803  committed effects=1682
+db: runs per job histogram: 0=179 1=868 2=425 3=206 4=143 5+=179
+worker events: failed=28 reaped=420 stale_commit_rejected=2056
+coverage: zombie/cancelled owners stopped by fencing=2056 (stale commits rejected=2056), re-executed jobs=1982
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS

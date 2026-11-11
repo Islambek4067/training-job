@@ -1,0 +1,33 @@
+=== mutation reaper-ignores-lease: 'WHERE status = 'running' AND lease_until < now()|||AND j.status = 'running' AND j.lease_until < now()' -> 'WHERE status = 'running'|||AND j.status = 'running''
+=== RUN   TestReaperLeavesLiveLeases
+=== RUN   TestReaperLeavesLiveLeases/read_committed
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+=== RUN   TestReaperLeavesLiveLeases/repeatable_read
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+=== RUN   TestReaperLeavesLiveLeases/serializable
+    silent_test.go:275: reaper took 20 live jobs (err=<nil>)
+--- FAIL: TestReaperLeavesLiveLeases (0.60s)
+    --- FAIL: TestReaperLeavesLiveLeases/read_committed (0.21s)
+    --- FAIL: TestReaperLeavesLiveLeases/repeatable_read (0.18s)
+    --- FAIL: TestReaperLeavesLiveLeases/serializable (0.21s)
+FAIL
+FAIL	soupq/internal/store	0.600s
+FAIL
+KILLED: tests fail with the mutation (good)
+=== chaos with mutant workers (reaper-ignores-lease)
+run 20261111T112445Z seed=1794396285536767341 jobs=2000 workers=8 rate=200/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 long=0.02x4000ms isolation=""
+client load finished after 29.518s; waiting for drain
+==================== CHAOS RUN 20261111T112445Z ====================
+seed=1794396285536767341 elapsed=1m50.229s jobs=2000 workers=8 isolation=""
+chaos: kill -9=47  SIGSTOP(8s)=16  clock-jumps=0  respawns=47
+client: POSTs=3786 (duplicate/replayed=1772, retries=0, transport/5xx errors=0)  mismatch-409=14
+client: cancels 200=203 409=3 other=0
+client: POST latency p50=2.822ms p99=9.343ms max=48.5ms
+db: jobs=2000  succeeded=1659 failed=166 (lease-exhausted=131) cancelled=175 queued=0 running=0
+db: executions (job_runs)=3884  committed effects=1659
+db: runs per job histogram: 0=175 1=865 2=406 3=228 4=107 5+=219
+worker events: failed=34 lost_ownership=159 reaped=547 stale_commit_rejected=1985
+coverage: zombie/cancelled owners stopped by fencing=2144 (stale commits rejected=1985), re-executed jobs=2059
+EFFICIENCY WARNING: 2059 re-executions but only 63 kills/freezes/forced expiries; leases are lost by live workers
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS

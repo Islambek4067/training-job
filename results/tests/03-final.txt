@@ -1,0 +1,72 @@
+=== RUN   TestNoDoubleClaim
+=== RUN   TestNoDoubleClaim/read_committed
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 312ms, false 'queue empty' answers=54
+=== RUN   TestNoDoubleClaim/repeatable_read
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 305ms, false 'queue empty' answers=51
+=== RUN   TestNoDoubleClaim/serializable
+    silent_test.go:177: claim storm: 1000 jobs, 32 claimers, 2.607s, false 'queue empty' answers=6
+    silent_test.go:177: 9 claims gave up after 20 serialization retries (worker would retry)
+--- PASS: TestNoDoubleClaim (11.33s)
+    --- PASS: TestNoDoubleClaim/read_committed (3.05s)
+    --- PASS: TestNoDoubleClaim/repeatable_read (2.97s)
+    --- PASS: TestNoDoubleClaim/serializable (5.32s)
+=== RUN   TestNoDoubleClaim_DetectorWorks
+    silent_test.go:204: claim storm: 300 jobs, 32 claimers, 1.424s, false 'queue empty' answers=0
+    silent_test.go:221: without FOR UPDATE SKIP LOCKED: 299 jobs were claimed more than once
+--- PASS: TestNoDoubleClaim_DetectorWorks (2.40s)
+=== RUN   TestZombieCannotWriteStaleResult
+=== RUN   TestZombieCannotWriteStaleResult/read_committed
+=== RUN   TestZombieCannotWriteStaleResult/repeatable_read
+=== RUN   TestZombieCannotWriteStaleResult/serializable
+--- PASS: TestZombieCannotWriteStaleResult (0.36s)
+    --- PASS: TestZombieCannotWriteStaleResult/read_committed (0.12s)
+    --- PASS: TestZombieCannotWriteStaleResult/repeatable_read (0.13s)
+    --- PASS: TestZombieCannotWriteStaleResult/serializable (0.12s)
+=== RUN   TestReaperLeavesLiveLeases
+=== RUN   TestReaperLeavesLiveLeases/read_committed
+=== RUN   TestReaperLeavesLiveLeases/repeatable_read
+=== RUN   TestReaperLeavesLiveLeases/serializable
+--- PASS: TestReaperLeavesLiveLeases (0.65s)
+    --- PASS: TestReaperLeavesLiveLeases/read_committed (0.22s)
+    --- PASS: TestReaperLeavesLiveLeases/repeatable_read (0.21s)
+    --- PASS: TestReaperLeavesLiveLeases/serializable (0.22s)
+=== RUN   TestExpiredButNotReclaimedOwnerMayCommit
+--- PASS: TestExpiredButNotReclaimedOwnerMayCommit (0.11s)
+=== RUN   TestCancelCompleteRace
+=== RUN   TestCancelCompleteRace/read_committed
+    silent_test.go:341: outcomes over 300 races: map[cancelled:243 succeeded:57]
+=== RUN   TestCancelCompleteRace/repeatable_read
+    silent_test.go:341: outcomes over 300 races: map[cancelled:264 succeeded:36]
+=== RUN   TestCancelCompleteRace/serializable
+    silent_test.go:341: outcomes over 300 races: map[cancelled:277 succeeded:23]
+--- PASS: TestCancelCompleteRace (11.46s)
+    --- PASS: TestCancelCompleteRace/read_committed (3.89s)
+    --- PASS: TestCancelCompleteRace/repeatable_read (3.73s)
+    --- PASS: TestCancelCompleteRace/serializable (3.84s)
+=== RUN   TestCancelCompleteInterleavings
+=== RUN   TestCancelCompleteInterleavings/read_committed
+=== RUN   TestCancelCompleteInterleavings/repeatable_read
+=== RUN   TestCancelCompleteInterleavings/serializable
+--- PASS: TestCancelCompleteInterleavings (1.77s)
+    --- PASS: TestCancelCompleteInterleavings/read_committed (0.61s)
+    --- PASS: TestCancelCompleteInterleavings/repeatable_read (0.57s)
+    --- PASS: TestCancelCompleteInterleavings/serializable (0.59s)
+=== RUN   TestIdempotentCreateUnderConcurrency
+=== RUN   TestIdempotentCreateUnderConcurrency/read_committed
+=== RUN   TestIdempotentCreateUnderConcurrency/repeatable_read
+=== RUN   TestIdempotentCreateUnderConcurrency/serializable
+--- PASS: TestIdempotentCreateUnderConcurrency (5.36s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/read_committed (1.87s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/repeatable_read (1.77s)
+    --- PASS: TestIdempotentCreateUnderConcurrency/serializable (1.72s)
+=== RUN   TestFrozenTransactionHoldsRowLock
+=== RUN   TestFrozenTransactionHoldsRowLock/without_timeout
+    silent_test.go:477: confirmed: a frozen open transaction blocks cancel and is invisible to the reaper
+=== RUN   TestFrozenTransactionHoldsRowLock/with_timeout
+--- PASS: TestFrozenTransactionHoldsRowLock (3.06s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/without_timeout (1.43s)
+    --- PASS: TestFrozenTransactionHoldsRowLock/with_timeout (1.62s)
+=== RUN   TestLeaseUsesOnlyDatabaseClock
+--- PASS: TestLeaseUsesOnlyDatabaseClock (0.10s)
+PASS
+ok  	soupq/internal/store	36.618s

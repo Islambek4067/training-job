@@ -1,0 +1,37 @@
+=== mutation no-fencing-on-complete: 'WHERE id = $1 AND attempt = $2 AND status = 'running'
+		RETURNING id, attempt' -> 'WHERE id = $1 AND $2::int IS NOT NULL AND status = 'running'
+		RETURNING id, attempt'
+=== RUN   TestZombieCannotWriteStaleResult
+=== RUN   TestZombieCannotWriteStaleResult/read_committed
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+=== RUN   TestZombieCannotWriteStaleResult/repeatable_read
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+=== RUN   TestZombieCannotWriteStaleResult/serializable
+    silent_test.go:246: zombie completion accepted
+    silent_test.go:252: zombie wrote 1 effects
+--- FAIL: TestZombieCannotWriteStaleResult (0.40s)
+    --- FAIL: TestZombieCannotWriteStaleResult/read_committed (0.17s)
+    --- FAIL: TestZombieCannotWriteStaleResult/repeatable_read (0.12s)
+    --- FAIL: TestZombieCannotWriteStaleResult/serializable (0.11s)
+FAIL
+FAIL	soupq/internal/store	0.400s
+FAIL
+KILLED: tests fail with the mutation (good)
+=== chaos with mutant workers (no-fencing-on-complete)
+run 20261111T111643Z seed=1794395803413349594 jobs=2000 workers=8 rate=200/s kill-every=2s pause-every=5s pause-for=8s clock-jump-every=0s dup=0.30 cancel=0.10 fail=0.02 long=0.02x4000ms isolation=""
+client load finished after 29.708s; waiting for drain
+==================== CHAOS RUN 20261111T111643Z ====================
+seed=1794395803413349594 elapsed=1m29.86s jobs=2000 workers=8 isolation=""
+chaos: kill -9=39  SIGSTOP(8s)=13  clock-jumps=0  respawns=39
+client: POSTs=3877 (duplicate/replayed=1852, retries=0, transport/5xx errors=0)  mismatch-409=25
+client: cancels 200=202 409=15 other=0
+client: POST latency p50=2.83ms p99=8.324ms max=125.41ms
+db: jobs=2000  succeeded=1791 failed=32 (lease-exhausted=0) cancelled=177 queued=0 running=0
+db: executions (job_runs)=1866  committed effects=1791
+db: runs per job histogram: 0=175 1=1790 2=31 3=3 4=0 5+=1
+worker events: failed=32 lost_ownership=2 reaped=41 stale_commit_rejected=9
+coverage: zombie/cancelled owners stopped by fencing=11 (stale commits rejected=9), re-executed jobs=41
+invariants: no lost jobs, no duplicate ids, <=1 effect per job, none stuck, states consistent
+RESULT: PASS
